@@ -9,8 +9,11 @@ Esta libreta introduce a los estudiantes al mundo del modelado predictivo usando
 ### Libreta principal
 - **[modelado-predictivo-introduccion.ipynb](modelado-predictivo-introduccion.ipynb)**: Libreta interactiva con las 3 sesiones de la semana
 
+### Datos
+- **[datos_liga_futbol.csv](datos_liga_futbol.csv)**: Datos sintéticos de una temporada completa de la liga ficticia (56 partidos, 14 columnas)
+
 ### Script de generación de datos
-- **[generar_datos_liga.py](generar_datos_liga.py)**: Generador de datos sintéticos de liga de fútbol con características realistas
+- **[generar_datos_liga.py](generar_datos_liga.py)**: Generador de datos sintéticos de liga de fútbol con características realistas (solo necesario si quieres regenerar los datos)
 
 ## Generador de datos sintéticos
 
@@ -35,41 +38,40 @@ El generador crea datos realistas de una liga de fútbol ficticia con:
 7. Zorros FC (65) - Equipo débil
 8. Cóndores United (60) - Equipo muy débil
 
-### Uso del generador
+### Uso básico en la libreta
 
-#### Como módulo Python
+La libreta lee directamente el archivo CSV:
 
 ```python
-from generar_datos_liga import generar_liga_futbol, generar_estadisticas_equipos
+import pandas as pd
 
-# Generar una temporada (56 partidos)
-datos = generar_liga_futbol(temporadas=1, semilla=42)
+# Cargar datos
+datos_partidos = pd.read_csv('datos_liga_futbol.csv')
 
-# Generar múltiples temporadas
-datos_multiples = generar_liga_futbol(temporadas=3, semilla=42)
-
-# Generar estadísticas por equipo
-estadisticas = generar_estadisticas_equipos(datos)
-print(estadisticas)
+# Explorar datos
+print(datos_partidos.head())
+print(datos_partidos.info())
 ```
 
-#### Como script independiente
+### Regenerar datos (opcional)
+
+Solo es necesario si quieres modificar los datos o crear una nueva temporada:
 
 ```bash
 # Activar entorno virtual
 .venv\Scripts\activate  # Windows
 source .venv/bin/activate  # Linux/Mac
 
-# Ejecutar generador
+# Ejecutar generador (sobrescribirá datos_liga_futbol.csv)
 python generar_datos_liga.py
 ```
 
 El script genera:
-- Total de partidos de la temporada
+- Archivo CSV con 56 partidos
 - Número de jornadas
-- Tabla de resultados
-- Tabla de posiciones
-- Análisis de ventaja local
+- Tabla de resultados en consola
+- Tabla de posiciones en consola
+- Análisis de ventaja local en consola
 
 ### Columnas generadas
 

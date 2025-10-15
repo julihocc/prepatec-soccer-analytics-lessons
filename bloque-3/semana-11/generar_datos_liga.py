@@ -375,6 +375,8 @@ def generar_estadisticas_equipos(datos_partidos: pd.DataFrame) -> pd.DataFrame:
 
 # Ejemplo de uso cuando se ejecuta el script directamente
 if __name__ == "__main__":
+    import os
+
     print("Generando datos de liga de fútbol...")
     print("=" * 50)
 
@@ -405,3 +407,21 @@ if __name__ == "__main__":
     print(f"Victorias locales: {victorias_local} ({(victorias_local/total)*100:.1f}%)")
     print(f"Victorias visitantes: {victorias_visitante} ({(victorias_visitante/total)*100:.1f}%)")
     print(f"Empates: {empates} ({(empates/total)*100:.1f}%)")
+
+    # Guardar CSV
+    print("\n" + "=" * 50)
+    print("Guardando datos en archivo CSV...")
+    print("=" * 50)
+
+    # Obtener directorio del script
+    directorio_script = os.path.dirname(os.path.abspath(__file__))
+    archivo_csv = os.path.join(directorio_script, "datos_liga_futbol.csv")
+
+    # Guardar datos
+    datos.to_csv(archivo_csv, index=False, encoding='utf-8')
+    print(f"\nArchivo guardado exitosamente: {archivo_csv}")
+    print(f"Tamaño del archivo: {os.path.getsize(archivo_csv) / 1024:.2f} KB")
+    print(f"Filas: {len(datos)}")
+    print(f"Columnas: {len(datos.columns)}")
+
+    print("\n¡Listo! Ahora puedes usar este archivo CSV en tu análisis.")
