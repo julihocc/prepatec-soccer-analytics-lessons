@@ -164,15 +164,34 @@ class GeneradorLigaFutbol:
             self.equipos[equipo_local]
         )
 
-        # Ajustar resultado basado en probabilidad
-        if np.random.random() < prob_victoria_local:
-            # Asegurar que el local gane si la probabilidad dice que debe ganar
+        # Convertir probabilidad de victoria local a tres resultados
+        # Probabilidad empate típica en fútbol: ~25-30%
+        prob_empate = 0.25
+        prob_victoria_visitante = 1.0 - prob_victoria_local
+
+        # Ajustar probabilidades para que sumen 1.0
+        factor_ajuste = 1.0 - prob_empate
+        prob_victoria_local_ajustada = prob_victoria_local * factor_ajuste
+        prob_victoria_visitante_ajustada = prob_victoria_visitante * factor_ajuste
+
+        # Determinar resultado basado en las tres probabilidades
+        rand = np.random.random()
+        if rand < prob_victoria_local_ajustada:
+            # Victoria local
             if goles_local <= goles_visitante:
-                goles_local = goles_visitante + 1
+                goles_local = goles_visitante + np.random.randint(1, 3)
+        elif rand < prob_victoria_local_ajustada + prob_empate:
+            # Empate - asegurar que los goles sean iguales
+            goles_compartidos = max(goles_local, goles_visitante)
+            # A veces reducir para hacer empates más realistas (0-0, 1-1, 2-2)
+            if goles_compartidos > 3 and np.random.random() < 0.5:
+                goles_compartidos = np.random.randint(0, 3)
+            goles_local = goles_compartidos
+            goles_visitante = goles_compartidos
         else:
-            # Asegurar que el visitante gane
+            # Victoria visitante
             if goles_visitante <= goles_local:
-                goles_visitante = goles_local + 1
+                goles_visitante = goles_local + np.random.randint(1, 3)
 
         # Determinar resultado
         if goles_local > goles_visitante:
