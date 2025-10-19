@@ -45,12 +45,12 @@ Este archivo contiene datos históricos de partidos de una liga de fútbol simul
 | `Goles_Local` | int | 0-7 | Cantidad de goles marcados por el equipo local |
 | `Goles_Visitante` | int | 0-6 | Cantidad de goles marcados por el equipo visitante |
 | `Resultado` | str | Victoria Local<br>Victoria Visitante<br>Empate | Resultado final del partido desde la perspectiva del equipo local |
-| `Ganador` | str | Nombre del equipo | Equipo que ganó el partido (o nombre de equipo en caso de empate) |
+| `Ganador` | str | Nombre del equipo<br>"Empate" | Equipo que ganó el partido, o "Empate" si hubo empate |
 
-**Distribución de resultados:**
-- Victorias Locales: 29 partidos (51.8%)
-- Victorias Visitantes: 27 partidos (48.2%)
-- Empates: 0 partidos (0.0%)
+**Distribución de resultados (típica):**
+- Victorias Locales: ~21-24 partidos (38-42%)
+- Empates: ~14 partidos (25%)
+- Victorias Visitantes: ~18-21 partidos (33-37%)
 
 ### Variables Contextuales
 
@@ -115,19 +115,22 @@ Estas variables no están en el CSV original pero se calculan en el notebook par
 Este dataset está diseñado para:
 
 1. **Introducción a Machine Learning**
-   - Clasificación binaria (ganador vs perdedor)
-   - Regresión logística
+   - Clasificación multi-clase (victoria local, empate, victoria visitante)
+   - Clasificación binaria (ganador vs no-ganador)
+   - Regresión logística multinomial
    - Evaluación de modelos con métricas básicas
 
 2. **Análisis Exploratorio de Datos**
    - Ventaja de jugar en casa
    - Correlación entre habilidad y resultados
    - Impacto de rachas en rendimiento
+   - Análisis de distribución de empates
 
 3. **Visualización de Datos Deportivos**
    - Distribución de goles
    - Comparación de equipos
    - Patrones temporales por jornada
+   - Frecuencia de empates por marcador (0-0, 1-1, 2-2, etc.)
 
 4. **Ingeniería de Características**
    - Transformación de variables categóricas
@@ -139,8 +142,8 @@ Este dataset está diseñado para:
 ## Limitaciones y Consideraciones
 
 1. **Datos Simulados**: Los datos son generados sintéticamente y no representan una liga real
-2. **Sin Empates**: El dataset actual no contiene empates, simplificando el problema de clasificación
-3. **Balance de Clases**: Las victorias locales y visitantes están casi balanceadas (52% vs 48%)
+2. **Problema Multi-clase**: El dataset incluye tres resultados posibles (victoria local, empate, victoria visitante), lo que lo hace apropiado para clasificación multi-clase
+3. **Distribución Realista**: Los empates representan aproximadamente 25% de los partidos, similar a ligas de fútbol reales
 4. **Tamaño del Dataset**: 56 partidos es un dataset pequeño para ML, apropiado solo para fines educativos
 5. **Variables Contextuales**: Faltan variables reales como clima, lesiones, o cambios de entrenador
 
