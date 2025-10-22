@@ -10,6 +10,7 @@ Este módulo enseña cómo combinar múltiples modelos de machine learning usand
 semana-12/
 ├── generar_datos_liga.py              # Script de generación de datos sintéticos
 ├── datos_tigres_fc.csv                # Dataset generado (no modificar manualmente)
+├── DICCIONARIO_DATOS.md               # Documentación detallada del dataset
 ├── modelos-avanzados-clasificacion.ipynb  # Notebook principal de análisis
 └── README.md                           # Este archivo
 ```
@@ -85,6 +86,18 @@ El archivo `datos_tigres_fc.csv` contiene **100 registros** de jugadores del Tig
 **Posiciones incluidas**: Portero, Defensa Central, Lateral Derecho/Izquierdo, Mediocampista (Defensivo/Centro/Ofensivo), Extremo Derecho/Izquierdo, Delantero Centro
 
 **Temporadas simuladas**: 2021-22, 2022-23, 2023-24
+
+### Documentación Completa del Dataset
+
+Para información detallada sobre el dataset (distribuciones estadísticas, notas metodológicas, casos de uso, limitaciones), consulta el archivo [DICCIONARIO_DATOS.md](DICCIONARIO_DATOS.md).
+
+Este diccionario incluye:
+- Descripción detallada de cada variable
+- Distribuciones estadísticas (media, mediana, rango)
+- Conexión con la liga ficticia de Semana 11
+- Criterios de clasificación titular/suplente
+- Ejemplos de registros interpretados
+- Limitaciones y consideraciones éticas
 
 ## Distribuciones Estadísticas
 
