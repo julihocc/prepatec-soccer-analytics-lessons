@@ -1,9 +1,13 @@
 """
-Script de Generación de Datos Sintéticos - FC Barcelona
-========================================================
+Script de Generación de Datos Sintéticos - Tigres FC
+====================================================
 
-Este script genera un dataset sintético de jugadores del FC Barcelona
+Este script genera un dataset sintético de jugadores del Tigres FC
 con estadísticas realistas simulando datos históricos de 3 temporadas.
+
+Tigres FC es el equipo más fuerte de la liga ficticia (85 puntos de habilidad),
+presentado en la semana-11 del curso. Este análisis profundiza en los datos
+individuales de sus jugadores.
 
 El dataset incluye 100 registros de jugadores (simulando plantillas de
 múltiples temporadas) para proporcionar suficientes datos para un análisis
@@ -19,7 +23,7 @@ Uso:
 
 Salida:
 -------
-    datos_barcelona.csv - Dataset con 100 jugadores y sus estadísticas
+    datos_tigres_fc.csv - Dataset con 100 jugadores y sus estadísticas
                           (simulando temporadas 2021-22, 2022-23, 2023-24)
 """
 
@@ -27,9 +31,9 @@ import pandas as pd
 import numpy as np
 
 
-def generar_datos_jugadores_barcelona(num_jugadores=100, semilla_aleatoria=42):
+def generar_datos_jugadores_tigres_fc(num_jugadores=100, semilla_aleatoria=42):
     """
-    Genera un dataset sintético de jugadores del Barcelona con estadísticas realistas.
+    Genera un dataset sintético de jugadores del Tigres FC con estadísticas realistas.
 
     Parámetros:
     -----------
@@ -128,31 +132,34 @@ def main():
     Función principal que genera y guarda el dataset.
     """
     print("="*70)
-    print("Generador de Datos Sintéticos - FC Barcelona")
+    print("Generador de Datos Sintéticos - Tigres FC")
     print("="*70)
+    print()
+    print("Tigres FC - El equipo más fuerte de la liga ficticia")
+    print("Habilidad del equipo: 85/100 puntos")
     print()
 
     # Generamos el dataset
     print("Generando dataset de 100 jugadores (3 temporadas simuladas)...")
-    datos_barcelona = generar_datos_jugadores_barcelona(num_jugadores=100)
+    datos_tigres = generar_datos_jugadores_tigres_fc(num_jugadores=100)
 
     # Mostramos resumen del dataset generado
     print("\nResumen del dataset generado:")
-    print(f"  - Total de jugadores: {len(datos_barcelona)}")
-    print(f"  - Titulares: {datos_barcelona['Es_Titular'].sum()}")
-    print(f"  - Suplentes: {len(datos_barcelona) - datos_barcelona['Es_Titular'].sum()}")
-    print(f"  - Goles (promedio): {datos_barcelona['Goles_Temporada'].mean():.1f}")
-    print(f"  - Minutos (promedio): {datos_barcelona['Minutos_Jugados'].mean():.0f}")
-    print(f"  - Edad (promedio): {datos_barcelona['Edad'].mean():.1f} años")
+    print(f"  - Total de jugadores: {len(datos_tigres)}")
+    print(f"  - Titulares: {datos_tigres['Es_Titular'].sum()}")
+    print(f"  - Suplentes: {len(datos_tigres) - datos_tigres['Es_Titular'].sum()}")
+    print(f"  - Goles (promedio): {datos_tigres['Goles_Temporada'].mean():.1f}")
+    print(f"  - Minutos (promedio): {datos_tigres['Minutos_Jugados'].mean():.0f}")
+    print(f"  - Edad (promedio): {datos_tigres['Edad'].mean():.1f} años")
 
     # Guardamos el dataset como CSV
-    nombre_archivo = "datos_barcelona.csv"
-    datos_barcelona.to_csv(nombre_archivo, index=False, encoding='utf-8')
+    nombre_archivo = "datos_tigres_fc.csv"
+    datos_tigres.to_csv(nombre_archivo, index=False, encoding='utf-8')
     print(f"\nDataset guardado exitosamente en: {nombre_archivo}")
 
     # Mostramos preview de los primeros 10 jugadores
-    print("\nPreview de los primeros 10 jugadores:")
-    print(datos_barcelona.head(10).to_string(index=False))
+    print("\nPreview de los primeros 10 jugadores del Tigres FC:")
+    print(datos_tigres.head(10).to_string(index=False))
 
     print("\n" + "="*70)
     print("Proceso completado exitosamente")

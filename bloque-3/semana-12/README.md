@@ -2,14 +2,14 @@
 
 ## Descripción
 
-Este módulo enseña cómo combinar múltiples modelos de machine learning usando **ensemble learning** (votación por mayoría) para crear predicciones más robustas. Usamos el caso práctico del FC Barcelona para predecir qué jugadores deberían ser titulares.
+Este módulo enseña cómo combinar múltiples modelos de machine learning usando **ensemble learning** (votación por mayoría) para crear predicciones más robustas. Usamos el caso práctico del Tigres FC (el equipo más fuerte de la liga ficticia presentada en la Semana 11, con 85 puntos de habilidad) para predecir qué jugadores deberían ser titulares.
 
 ## Estructura del Proyecto
 
 ```
 semana-12/
 ├── generar_datos_liga.py              # Script de generación de datos sintéticos
-├── datos_barcelona.csv                 # Dataset generado (no modificar manualmente)
+├── datos_tigres_fc.csv                # Dataset generado (no modificar manualmente)
 ├── modelos-avanzados-clasificacion.ipynb  # Notebook principal de análisis
 └── README.md                           # Este archivo
 ```
@@ -28,21 +28,24 @@ python generar_datos_liga.py
 **Salida esperada:**
 ```
 ======================================================================
-Generador de Datos Sintéticos - FC Barcelona
+Generador de Datos Sintéticos - Tigres FC
 ======================================================================
 
-Generando dataset de 15 jugadores...
+Tigres FC - El equipo más fuerte de la liga ficticia
+Habilidad del equipo: 85/100 puntos
+
+Generando dataset de 100 jugadores (3 temporadas simuladas)...
 
 Resumen del dataset generado:
-  - Total de jugadores: 15
-  - Titulares: 9
-  - Suplentes: 6
+  - Total de jugadores: 100
+  - Titulares: 60
+  - Suplentes: 40
   ...
 
-Dataset guardado exitosamente en: datos_barcelona.csv
+Dataset guardado exitosamente en: datos_tigres_fc.csv
 ```
 
-Esto creará el archivo `datos_barcelona.csv` con 15 jugadores sintéticos.
+Esto creará el archivo `datos_tigres_fc.csv` con 100 jugadores sintéticos del Tigres FC distribuidos en 3 temporadas.
 
 ### Paso 2: Ejecutar el Análisis
 
@@ -52,7 +55,7 @@ Abre y ejecuta el notebook Jupyter:
 jupyter notebook modelos-avanzados-clasificacion.ipynb
 ```
 
-El notebook cargará automáticamente `datos_barcelona.csv` y realizará todo el análisis de modelos múltiples.
+El notebook cargará automáticamente `datos_tigres_fc.csv` y realizará todo el análisis de modelos múltiples.
 
 ## Ventajas de Esta Estructura
 
@@ -71,7 +74,7 @@ El notebook cargará automáticamente `datos_barcelona.csv` y realizará todo el
 
 ## Contenido del Dataset
 
-El archivo `datos_barcelona.csv` contiene **100 registros** de jugadores:
+El archivo `datos_tigres_fc.csv` contiene **100 registros** de jugadores del Tigres FC:
 
 - **Jugador**: Nombre con posición y temporada (ej: "Delantero_Centro_2022-23_32")
 - **Goles_Temporada**: Goles marcados en la temporada (0-15)
@@ -119,7 +122,7 @@ El generador usa distribuciones realistas:
 
 ## Solución de Problemas
 
-### Error: "No se encontró el archivo 'datos_barcelona.csv'"
+### Error: "No se encontró el archivo 'datos_tigres_fc.csv'"
 
 **Solución:** Ejecuta primero el script generador:
 ```bash
@@ -129,7 +132,7 @@ python generar_datos_liga.py
 ### El notebook da resultados diferentes cada vez
 
 **Verificación:** Asegúrate de que:
-1. Estás usando el mismo `datos_barcelona.csv`
+1. Estás usando el mismo `datos_tigres_fc.csv`
 2. El script generador usa `np.random.seed(42)`
 3. No modificaste manualmente el CSV
 
