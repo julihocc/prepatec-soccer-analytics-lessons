@@ -75,11 +75,22 @@ Este archivo contiene datos históricos de partidos de una liga de fútbol simul
 ### Habilidad de Equipos
 
 Los valores de habilidad representan la fuerza relativa de cada equipo en una escala de 0 a 100:
-- **85 puntos**: Tigres FC, Águilas United (equipos más fuertes)
-- **60 puntos**: Cóndores United (equipo más débil)
-- **Rango típico**: 60-85 puntos
+
+**Distribución de habilidades:**
+1. **Tigres FC: 85** - Equipo más fuerte (analizado en detalle en Semana 12)
+2. Águilas United: 82 - Equipo fuerte
+3. Leones SC: 78 - Equipo medio-fuerte
+4. Halcones City: 75 - Equipo medio
+5. Lobos Atlético: 72 - Equipo medio
+6. Pumas CF: 68 - Equipo medio-débil
+7. Zorros FC: 65 - Equipo débil
+8. Cóndores United: 60 - Equipo más débil
+
+**Rango**: 60-85 puntos (diferencia máxima: 25 puntos)
 
 La diferencia de habilidad entre equipos (`Habilidad_Local - Habilidad_Visitante`) varía de -25 a +25 puntos.
+
+**Conexión con Semana 12:** El Tigres FC, como el equipo más fuerte de la liga, es analizado a nivel de jugadores individuales en la Semana 12, donde se estudian datos de 100 jugadores históricos del equipo.
 
 ### Rachas de Victoria
 

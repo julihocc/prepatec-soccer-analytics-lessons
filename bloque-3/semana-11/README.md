@@ -29,7 +29,7 @@ El generador crea datos realistas de una liga de fútbol ficticia con:
 
 ### Equipos de la liga ficticia
 
-1. Tigres FC (85) - Equipo muy fuerte
+1. **Tigres FC (85)** - Equipo muy fuerte (analizado en detalle en Semana 12)
 2. Águilas United (82) - Equipo fuerte
 3. Leones SC (78) - Equipo medio-fuerte
 4. Halcones City (75) - Equipo medio
@@ -37,6 +37,8 @@ El generador crea datos realistas de una liga de fútbol ficticia con:
 6. Pumas CF (68) - Equipo medio-débil
 7. Zorros FC (65) - Equipo débil
 8. Cóndores United (60) - Equipo muy débil
+
+**Nota sobre la narrativa del Bloque 3:** Esta liga ficticia proporciona el contexto para todas las semanas del bloque. En la Semana 12, profundizamos en el análisis de jugadores individuales del Tigres FC, el equipo más fuerte de la liga.
 
 ### Uso básico en la libreta
 
@@ -211,12 +213,32 @@ La libreta utiliza preguntas guía constantes:
 - Conectar con eventos deportivos actuales
 
 ### Conexión con curriculum
+
+#### Narrativa unificada del Bloque 3
+El Bloque 3 utiliza una **narrativa progresiva** basada en la liga ficticia de 8 equipos:
+
 - **Semana 10**: Análisis estadístico descriptivo
-- **Semana 11**: Introducción a modelado predictivo (esta libreta)
-- **Semana 12**: Modelos de clasificación avanzados
-- **Semana 13**: Métricas avanzadas de evaluación
-- **Semana 14**: Feature engineering
-- **Semana 15**: Proyecto integrador final
+- **Semana 11**: Introducción a modelado predictivo (esta libreta) - **Análisis macro de la liga**
+  - Se presenta la liga completa con 8 equipos
+  - Se analizan resultados de 56 partidos
+  - Se identifica al Tigres FC como el equipo más fuerte (85/100)
+
+- **Semana 12**: Modelos de clasificación avanzados - **Análisis micro de jugadores**
+  - Profundización en datos individuales de jugadores del Tigres FC
+  - Ensemble learning con 100 jugadores del equipo más fuerte
+  - Conexión directa con la liga ficticia presentada aquí
+
+- **Semana 13**: Métricas avanzadas de evaluación - **Continuación con Tigres FC**
+  - Evaluación avanzada de modelos de clasificación
+  - Métricas especializadas (precision, recall, F1-score)
+
+- **Semana 14**: Feature engineering - **Continuación con Tigres FC**
+  - Ingeniería de características para mejorar predicciones
+  - Optimización de modelos
+
+- **Semana 15**: Proyecto integrador final - **Liga completa y análisis comparativo**
+  - Aplicación de todos los conceptos aprendidos
+  - Análisis comparativo entre equipos de la liga
 
 ## Limitaciones y consideraciones éticas
 
