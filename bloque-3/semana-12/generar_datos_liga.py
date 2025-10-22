@@ -3,10 +3,14 @@ Script de Generación de Datos Sintéticos - FC Barcelona
 ========================================================
 
 Este script genera un dataset sintético de jugadores del FC Barcelona
-con estadísticas realistas de una temporada de fútbol.
+con estadísticas realistas simulando datos históricos de 3 temporadas.
+
+El dataset incluye 100 registros de jugadores (simulando plantillas de
+múltiples temporadas) para proporcionar suficientes datos para un análisis
+robusto de machine learning.
 
 Autor: Equipo de Ciencia de Datos - Prepa Tec
-Versión: 1.0
+Versión: 2.0
 Fecha: 2025
 
 Uso:
@@ -15,14 +19,15 @@ Uso:
 
 Salida:
 -------
-    datos_barcelona.csv - Dataset con 15 jugadores y sus estadísticas
+    datos_barcelona.csv - Dataset con 100 jugadores y sus estadísticas
+                          (simulando temporadas 2021-22, 2022-23, 2023-24)
 """
 
 import pandas as pd
 import numpy as np
 
 
-def generar_datos_jugadores_barcelona(num_jugadores=15, semilla_aleatoria=42):
+def generar_datos_jugadores_barcelona(num_jugadores=100, semilla_aleatoria=42):
     """
     Genera un dataset sintético de jugadores del Barcelona con estadísticas realistas.
 
@@ -62,12 +67,20 @@ def generar_datos_jugadores_barcelona(num_jugadores=15, semilla_aleatoria=42):
     # Establecemos semilla para reproducibilidad
     np.random.seed(semilla_aleatoria)
 
-    # Generamos nombres de jugadores usando prefijos realistas
-    prefijos = ["Jugador", "Delantero", "Mediocampista", "Defensa", "Portero"]
-    nombres_jugadores = [
-        f"{np.random.choice(prefijos)}_{i+1}"
-        for i in range(num_jugadores)
-    ]
+    # Generamos nombres de jugadores con posiciones y números realistas
+    # Simulamos una plantilla de varias temporadas (datos históricos)
+    posiciones = ["Portero", "Defensa_Central", "Lateral_Derecho", "Lateral_Izquierdo",
+                  "Mediocampista_Defensivo", "Mediocampista_Centro", "Mediocampista_Ofensivo",
+                  "Extremo_Derecho", "Extremo_Izquierdo", "Delantero_Centro"]
+
+    temporadas = ["2021-22", "2022-23", "2023-24"]
+
+    nombres_jugadores = []
+    for i in range(num_jugadores):
+        posicion = np.random.choice(posiciones)
+        temporada = np.random.choice(temporadas)
+        # Formato: Posicion_Temporada_NumJugador
+        nombres_jugadores.append(f"{posicion}_{temporada}_{i+1}")
 
     # Generamos goles con distribución exponencial
     # La mayoría tendrá 0-3 goles, algunos 4-8, muy pocos más de 10
@@ -120,8 +133,8 @@ def main():
     print()
 
     # Generamos el dataset
-    print("Generando dataset de 15 jugadores...")
-    datos_barcelona = generar_datos_jugadores_barcelona(num_jugadores=15)
+    print("Generando dataset de 100 jugadores (3 temporadas simuladas)...")
+    datos_barcelona = generar_datos_jugadores_barcelona(num_jugadores=100)
 
     # Mostramos resumen del dataset generado
     print("\nResumen del dataset generado:")
@@ -137,9 +150,9 @@ def main():
     datos_barcelona.to_csv(nombre_archivo, index=False, encoding='utf-8')
     print(f"\nDataset guardado exitosamente en: {nombre_archivo}")
 
-    # Mostramos preview de los primeros 5 jugadores
-    print("\nPreview de los primeros 5 jugadores:")
-    print(datos_barcelona.head().to_string(index=False))
+    # Mostramos preview de los primeros 10 jugadores
+    print("\nPreview de los primeros 10 jugadores:")
+    print(datos_barcelona.head(10).to_string(index=False))
 
     print("\n" + "="*70)
     print("Proceso completado exitosamente")

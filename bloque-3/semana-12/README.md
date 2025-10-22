@@ -71,13 +71,17 @@ El notebook cargará automáticamente `datos_barcelona.csv` y realizará todo el
 
 ## Contenido del Dataset
 
-El archivo `datos_barcelona.csv` contiene:
+El archivo `datos_barcelona.csv` contiene **100 registros** de jugadores:
 
-- **Jugador**: Nombre del jugador (Jugador_1, Defensa_2, etc.)
+- **Jugador**: Nombre con posición y temporada (ej: "Delantero_Centro_2022-23_32")
 - **Goles_Temporada**: Goles marcados en la temporada (0-15)
 - **Minutos_Jugados**: Minutos totales jugados (400-2200)
 - **Edad**: Edad del jugador (18-35 años)
 - **Es_Titular**: Variable objetivo (1 = titular, 0 = suplente)
+
+**Posiciones incluidas**: Portero, Defensa Central, Lateral Derecho/Izquierdo, Mediocampista (Defensivo/Centro/Ofensivo), Extremo Derecho/Izquierdo, Delantero Centro
+
+**Temporadas simuladas**: 2021-22, 2022-23, 2023-24
 
 ## Distribuciones Estadísticas
 
@@ -94,6 +98,8 @@ El generador usa distribuciones realistas:
 2. **Votación por Mayoría**: Estrategia de combinación simple
 3. **Separación de Datos**: Generación vs. Análisis
 4. **Workflow Profesional**: Archivos CSV como interface
+5. **Dataset Robusto**: 100 registros = evaluaciones más confiables
+6. **Datos Multi-temporales**: Simulación de 3 temporadas históricas
 
 ## Sesiones del Notebook
 
