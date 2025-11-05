@@ -172,10 +172,46 @@ No existe el modelo perfecto. Siempre hay un balance entre:
 ```
 semana-13/
 ├── metricas-avanzadas-evaluacion.ipynb  # Notebook principal
+├── generar_datos_tigres.py              # Script generador de datos
+├── datos_evaluacion_tigres_fc.csv       # Dataset generado
+├── DICCIONARIO_DATOS.md                 # Documentación del dataset
 └── README.md                            # Este archivo
 ```
 
-**Nota**: Esta semana no requiere datasets externos ni scripts de generación, ya que utiliza datos de ejemplo embebidos en el notebook para propósitos didácticos.
+### Descripción de Archivos
+
+**metricas-avanzadas-evaluacion.ipynb**
+- Notebook principal con 4 módulos de aprendizaje
+- Carga datos desde `datos_evaluacion_tigres_fc.csv`
+- Enseña matriz de confusión, precision, recall y visualizaciones
+
+**generar_datos_tigres.py**
+- Script Python para generar datos sintéticos
+- Crea 15 jugadores del Tigres FC con predicciones y realidad
+- Garantiza métricas específicas (86.7% accuracy, 90% precision/recall)
+- Usa semilla fija (42) para reproducibilidad
+
+**datos_evaluacion_tigres_fc.csv**
+- Dataset de 15 jugadores con 9 variables
+- Incluye predicciones del modelo y realidad del partido
+- Diseñado para producir 9 TP, 4 TN, 1 FP, 1 FN
+- Generado automáticamente por `generar_datos_tigres.py`
+
+**DICCIONARIO_DATOS.md**
+- Documentación completa del dataset
+- Describe cada una de las 9 variables
+- Explica rangos, distribuciones y relaciones
+- Incluye información sobre casos especiales (FP y FN)
+
+### Generación de Datos
+
+Para regenerar el dataset:
+```bash
+cd contenido/bloque-3/semana-13
+python generar_datos_tigres.py
+```
+
+Esto creará/actualizará el archivo `datos_evaluacion_tigres_fc.csv` con datos consistentes.
 
 ---
 
@@ -200,20 +236,35 @@ import seaborn as sns
 
 ## Ejecución del Notebook
 
-### Opción 1: Jupyter Notebook
+### Paso 1: Generar los Datos
+
+Antes de ejecutar el notebook, asegúrate de que el archivo CSV existe:
+
+```bash
+cd contenido/bloque-3/semana-13
+python generar_datos_tigres.py
+```
+
+Esto creará el archivo `datos_evaluacion_tigres_fc.csv` necesario para el notebook.
+
+### Paso 2: Ejecutar el Notebook
+
+#### Opción 1: Jupyter Notebook
 ```bash
 cd contenido/bloque-3/semana-13
 jupyter notebook metricas-avanzadas-evaluacion.ipynb
 ```
 
-### Opción 2: JupyterLab
+#### Opción 2: JupyterLab
 ```bash
 cd contenido/bloque-3/semana-13
 jupyter lab metricas-avanzadas-evaluacion.ipynb
 ```
 
-### Opción 3: VS Code
+#### Opción 3: VS Code
 Abrir el archivo `.ipynb` directamente en VS Code con la extensión de Jupyter.
+
+**Nota**: El notebook ya incluye el archivo CSV generado en el repositorio, por lo que técnicamente el Paso 1 es opcional. Solo es necesario si deseas regenerar los datos.
 
 ---
 
@@ -313,6 +364,19 @@ Estas preguntas fomentan el pensamiento crítico y la reflexión sobre el contex
 - Conexión explícita con Semana 12 agregada
 - Contexto de la liga ficticia (85/100 habilidad) integrado
 - README.md creado con documentación completa
+
+✅ **Separación de generación de datos**:
+- Script `generar_datos_tigres.py` creado
+- Dataset `datos_evaluacion_tigres_fc.csv` generado
+- DICCIONARIO_DATOS.md con documentación exhaustiva
+- Notebook actualizado para importar datos del CSV
+- Reproducibilidad garantizada con semilla fija (42)
+
+✅ **Mejoras de arquitectura**:
+- Datos sintéticos separados del análisis (mejor práctica)
+- Dataset versionado y documentado
+- Fácil regeneración de datos para experimentos
+- Consistencia con estructura de Semanas 11 y 12
 
 ### Próximos Pasos
 - [ ] Considerar agregar ejemplos de ROC curves en versiones futuras
