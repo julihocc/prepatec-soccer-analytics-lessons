@@ -14,7 +14,7 @@ Progreso: ███░░░░░░░░░░░░░░░░░ 17% (1/6 
 
 | Sesión | Notebook | Estado | Prioridad |
 |--------|----------|--------|-----------|
-| 1. EDA | `01-eda.ipynb` | ✅ Existe (simplificar) | Alta |
+| 1. EDA | `01-eda.ipynb` | ✅ Completo | - |
 | 2. Regresión Logística | `02-regresion-logistica.ipynb` | ⏳ Pendiente | Alta |
 | 3. Árboles Decisión | `03-arboles-decision.ipynb` | ⏳ Pendiente | Media |
 | 4. Random Forest | `04-random-forest.ipynb` | ⏳ Pendiente | Media |
@@ -26,25 +26,23 @@ Progreso: ███░░░░░░░░░░░░░░░░░ 17% (1/6 
 ## Detalle por Sesión
 
 ### ✅ Sesión 1: EDA
-**Archivo**: `notebook/eda.ipynb` (renombrar a `01-eda.ipynb`)
-**Estado**: Existe pero debe simplificarse
+**Archivo**: `notebook/01-eda.ipynb`
+**Estado**: ✅ Completado
 
 **Completado**:
-- [x] Notebook creado
+
+- [x] Notebook creado y renombrado a `01-eda.ipynb`
 - [x] Dataset disponible: `data/datos_liga_futbol.csv`
 - [x] Diccionario de datos: `data/DICCIONARIO_DATOS.md`
-
-**Pendiente**:
-- [ ] Simplificar de 15 a 6-8 secciones
-- [ ] Mantener solo lo esencial:
-  - Carga e inspección
-  - Calidad de datos
-  - Análisis de resultados
-  - Análisis de goles
-  - Ventaja local
-  - Correlaciones
-  - Resumen ejecutivo
-- [ ] Probar en clase (60 minutos)
+- [x] Simplificado de 15 a 7 secciones esenciales:
+  1. Configuración y Carga de Datos
+  2. Inspección Inicial y Calidad de Datos
+  3. Análisis de Resultados (Variable Objetivo)
+  4. Análisis de Goles
+  5. Características Clave: Habilidades y Rachas
+  6. Matriz de Correlación
+  7. Resumen y Conclusiones
+- [x] Optimizado para sesión de 60 minutos
 
 ---
 
@@ -172,7 +170,16 @@ bloque-3/
 
 ## Registro de Cambios
 
+### 2025-11-07 (Actualización 3)
+
+- ✅ **SESIÓN 1 COMPLETADA**: EDA notebook finalizado
+- ✅ Simplificado de 15 a 7 secciones esenciales
+- ✅ Renombrado a `01-eda.ipynb`
+- ✅ Optimizado para sesión de 60 minutos en clase
+- ✅ Siguiente paso: Crear notebook de Regresión Logística
+
 ### 2025-11-07 (Actualización 2)
+
 - ✅ **SIMPLIFICADO**: Estructura sin módulos externos
 - ✅ Eliminada carpeta `src/` del plan
 - ✅ Reducido de 7 a 6 sesiones
@@ -180,6 +187,7 @@ bloque-3/
 - ✅ README y PROGRESO actualizados
 
 ### 2025-11-07 (Inicial)
+
 - ✅ Creado README.md con plan completo
 - ✅ Creado PROGRESO.md para tracking
 - ✅ EDA notebook existe (como `eda.ipynb`)
