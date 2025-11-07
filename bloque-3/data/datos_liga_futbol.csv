@@ -1,0 +1,281 @@
+Temporada,Jornada,Equipo_Local,Equipo_Visitante,Goles_Local,Goles_Visitante,Resultado,Ganador,Juega_En_Casa,Probabilidad_Victoria_Local,Habilidad_Local,Habilidad_Visitante,Racha_Local,Racha_Visitante
+1,1,Tigres FC,Águilas United,4,2,Victoria Local,Tigres FC,True,0.576,85,82,0,0
+1,1,Tigres FC,Zorros FC,1,3,Victoria Visitante,Zorros FC,True,0.501,85,65,1,0
+1,1,Lobos Atlético,Zorros FC,2,0,Victoria Local,Lobos Atlético,True,0.704,72,65,0,1
+1,1,Águilas United,Cóndores United,5,0,Victoria Local,Águilas United,True,0.706,82,60,0,0
+1,2,Leones SC,Zorros FC,1,2,Victoria Visitante,Zorros FC,True,0.248,78,65,0,0
+1,2,Cóndores United,Águilas United,1,3,Victoria Visitante,Águilas United,True,0.121,60,82,0,1
+1,2,Pumas CF,Águilas United,1,2,Victoria Visitante,Águilas United,True,0.22,68,82,0,2
+1,2,Halcones City,Zorros FC,4,0,Victoria Local,Halcones City,True,0.551,75,65,0,1
+1,3,Zorros FC,Leones SC,1,4,Victoria Visitante,Leones SC,True,0.361,65,78,0,0
+1,3,Águilas United,Zorros FC,5,4,Victoria Local,Águilas United,True,0.855,82,65,3,0
+1,3,Cóndores United,Pumas CF,5,4,Victoria Local,Cóndores United,True,0.556,60,68,0,0
+1,3,Tigres FC,Lobos Atlético,2,1,Victoria Local,Tigres FC,True,0.656,85,72,0,1
+1,4,Lobos Atlético,Cóndores United,0,2,Victoria Visitante,Cóndores United,True,0.301,72,60,0,1
+1,4,Lobos Atlético,Leones SC,2,2,Empate,Empate,True,0.401,72,78,0,1
+1,4,Águilas United,Leones SC,4,2,Victoria Local,Águilas United,True,0.735,82,78,4,0
+1,4,Leones SC,Lobos Atlético,2,0,Victoria Local,Leones SC,True,0.95,78,72,0,0
+1,5,Tigres FC,Cóndores United,5,2,Victoria Local,Tigres FC,True,0.823,85,60,1,2
+1,5,Tigres FC,Pumas CF,2,4,Victoria Visitante,Pumas CF,True,0.623,85,68,2,0
+1,5,Pumas CF,Cóndores United,0,1,Victoria Visitante,Cóndores United,True,0.754,68,60,1,0
+1,5,Halcones City,Cóndores United,4,2,Victoria Local,Halcones City,True,0.612,75,60,1,1
+1,6,Zorros FC,Pumas CF,1,3,Victoria Visitante,Pumas CF,True,0.546,65,68,0,0
+1,6,Zorros FC,Lobos Atlético,3,5,Victoria Visitante,Lobos Atlético,True,0.614,65,72,0,0
+1,6,Cóndores United,Halcones City,2,3,Victoria Visitante,Halcones City,True,0.05,60,75,0,2
+1,6,Leones SC,Águilas United,3,1,Victoria Local,Leones SC,True,0.694,78,82,1,5
+1,7,Águilas United,Halcones City,2,2,Empate,Empate,True,0.753,82,75,0,3
+1,7,Leones SC,Halcones City,3,4,Victoria Visitante,Halcones City,True,0.516,78,75,2,0
+1,7,Halcones City,Lobos Atlético,1,2,Victoria Visitante,Lobos Atlético,True,0.704,75,72,1,1
+1,7,Lobos Atlético,Halcones City,2,2,Empate,Empate,True,0.45,72,75,2,0
+1,8,Cóndores United,Lobos Atlético,0,2,Victoria Visitante,Lobos Atlético,True,0.295,60,72,0,0
+1,8,Zorros FC,Cóndores United,1,2,Victoria Visitante,Cóndores United,True,0.454,65,60,0,0
+1,8,Halcones City,Pumas CF,4,5,Victoria Visitante,Pumas CF,True,0.569,75,68,0,1
+1,8,Águilas United,Pumas CF,1,3,Victoria Visitante,Pumas CF,True,0.335,82,68,0,2
+1,9,Lobos Atlético,Pumas CF,3,0,Victoria Local,Lobos Atlético,True,0.78,72,68,1,3
+1,9,Cóndores United,Tigres FC,2,2,Empate,Empate,True,0.652,60,85,1,0
+1,9,Pumas CF,Leones SC,0,2,Victoria Visitante,Leones SC,True,0.407,68,78,0,0
+1,9,Lobos Atlético,Águilas United,1,0,Victoria Local,Lobos Atlético,True,0.805,72,82,2,0
+1,10,Pumas CF,Zorros FC,2,2,Empate,Empate,True,0.413,68,65,0,0
+1,10,Tigres FC,Leones SC,2,0,Victoria Local,Tigres FC,True,0.644,85,78,0,1
+1,10,Halcones City,Tigres FC,3,2,Victoria Local,Halcones City,True,0.82,75,85,0,1
+1,10,Tigres FC,Halcones City,2,2,Empate,Empate,True,0.441,85,75,0,1
+1,11,Zorros FC,Águilas United,1,0,Victoria Local,Zorros FC,True,0.318,65,82,0,0
+1,11,Pumas CF,Lobos Atlético,0,3,Victoria Visitante,Lobos Atlético,True,0.167,68,72,0,3
+1,11,Pumas CF,Tigres FC,2,2,Empate,Empate,True,0.207,68,85,0,0
+1,11,Halcones City,Leones SC,3,0,Victoria Local,Halcones City,True,0.52,75,78,0,0
+1,12,Zorros FC,Halcones City,3,4,Victoria Visitante,Halcones City,True,0.458,65,75,1,1
+1,12,Águilas United,Lobos Atlético,2,1,Victoria Local,Águilas United,True,0.516,82,72,0,4
+1,12,Halcones City,Águilas United,3,2,Victoria Local,Halcones City,True,0.589,75,82,2,1
+1,12,Leones SC,Pumas CF,6,4,Victoria Local,Leones SC,True,0.522,78,68,0,0
+1,13,Cóndores United,Zorros FC,2,2,Empate,Empate,True,0.856,60,65,0,0
+1,13,Leones SC,Cóndores United,2,2,Empate,Empate,True,0.318,78,60,1,0
+1,13,Águilas United,Tigres FC,1,0,Victoria Local,Águilas United,True,0.481,82,85,0,0
+1,13,Zorros FC,Tigres FC,6,4,Victoria Local,Zorros FC,True,0.95,65,85,0,0
+1,14,Leones SC,Tigres FC,3,1,Victoria Local,Leones SC,True,0.764,78,85,0,0
+1,14,Lobos Atlético,Tigres FC,2,0,Victoria Local,Lobos Atlético,True,0.25,72,85,0,0
+1,14,Cóndores United,Leones SC,0,2,Victoria Visitante,Leones SC,True,0.539,60,78,0,1
+1,14,Pumas CF,Halcones City,2,2,Empate,Empate,True,0.675,68,75,0,3
+2,1,Leones SC,Águilas United,3,3,Empate,Empate,True,0.398,78,82,0,0
+2,1,Pumas CF,Zorros FC,0,1,Victoria Visitante,Zorros FC,True,0.373,68,65,0,0
+2,1,Lobos Atlético,Halcones City,2,1,Victoria Local,Lobos Atlético,True,0.269,72,75,0,0
+2,1,Tigres FC,Leones SC,2,3,Victoria Visitante,Leones SC,True,0.487,85,78,0,0
+2,2,Halcones City,Águilas United,2,2,Empate,Empate,True,0.497,75,82,0,0
+2,2,Lobos Atlético,Águilas United,4,3,Victoria Local,Lobos Atlético,True,0.675,72,82,1,0
+2,2,Lobos Atlético,Pumas CF,9,7,Victoria Local,Lobos Atlético,True,0.338,72,68,2,0
+2,2,Pumas CF,Cóndores United,1,3,Victoria Visitante,Cóndores United,True,0.471,68,60,0,0
+2,3,Zorros FC,Pumas CF,0,3,Victoria Visitante,Pumas CF,True,0.264,65,68,1,0
+2,3,Zorros FC,Tigres FC,3,2,Victoria Local,Zorros FC,True,0.704,65,85,0,0
+2,3,Águilas United,Lobos Atlético,5,6,Victoria Visitante,Lobos Atlético,True,0.622,82,72,0,3
+2,3,Águilas United,Cóndores United,3,5,Victoria Visitante,Cóndores United,True,0.884,82,60,0,1
+2,4,Lobos Atlético,Cóndores United,1,1,Empate,Empate,True,0.704,72,60,4,2
+2,4,Tigres FC,Pumas CF,2,3,Victoria Visitante,Pumas CF,True,0.518,85,68,0,1
+2,4,Leones SC,Tigres FC,1,0,Victoria Local,Leones SC,True,0.556,78,85,1,0
+2,4,Halcones City,Leones SC,2,1,Victoria Local,Halcones City,True,0.654,75,78,0,2
+2,5,Leones SC,Lobos Atlético,2,1,Victoria Local,Leones SC,True,0.159,78,72,0,0
+2,5,Pumas CF,Lobos Atlético,3,2,Victoria Local,Pumas CF,True,0.712,68,72,2,0
+2,5,Águilas United,Pumas CF,4,3,Victoria Local,Águilas United,True,0.566,82,68,0,3
+2,5,Cóndores United,Lobos Atlético,3,3,Empate,Empate,True,0.33,60,72,0,0
+2,6,Leones SC,Cóndores United,1,1,Empate,Empate,True,0.372,78,60,1,0
+2,6,Zorros FC,Halcones City,0,1,Victoria Visitante,Halcones City,True,0.539,65,75,1,1
+2,6,Lobos Atlético,Zorros FC,3,2,Victoria Local,Lobos Atlético,True,0.926,72,65,0,0
+2,6,Cóndores United,Halcones City,2,2,Empate,Empate,True,0.571,60,75,0,2
+2,7,Cóndores United,Tigres FC,1,1,Empate,Empate,True,0.519,60,85,0,0
+2,7,Pumas CF,Águilas United,1,2,Victoria Visitante,Águilas United,True,0.401,68,82,0,1
+2,7,Pumas CF,Leones SC,4,4,Empate,Empate,True,0.05,68,78,0,0
+2,7,Cóndores United,Pumas CF,3,1,Victoria Local,Cóndores United,True,0.642,60,68,0,0
+2,8,Cóndores United,Águilas United,0,2,Victoria Visitante,Águilas United,True,0.443,60,82,1,2
+2,8,Águilas United,Leones SC,0,2,Victoria Visitante,Leones SC,True,0.175,82,78,3,0
+2,8,Zorros FC,Cóndores United,2,1,Victoria Local,Zorros FC,True,0.424,65,60,0,0
+2,8,Lobos Atlético,Tigres FC,0,2,Victoria Visitante,Tigres FC,True,0.103,72,85,1,0
+2,9,Águilas United,Tigres FC,3,2,Victoria Local,Águilas United,True,0.15,82,85,0,1
+2,9,Zorros FC,Lobos Atlético,3,1,Victoria Local,Zorros FC,True,0.345,65,72,1,0
+2,9,Leones SC,Zorros FC,4,2,Victoria Local,Leones SC,True,0.682,78,65,1,2
+2,9,Halcones City,Cóndores United,3,1,Victoria Local,Halcones City,True,0.547,75,60,0,0
+2,10,Águilas United,Zorros FC,1,3,Victoria Visitante,Zorros FC,True,0.544,82,65,1,0
+2,10,Tigres FC,Halcones City,0,2,Victoria Visitante,Halcones City,True,0.587,85,75,0,1
+2,10,Zorros FC,Águilas United,1,3,Victoria Visitante,Águilas United,True,0.404,65,82,1,0
+2,10,Halcones City,Pumas CF,2,1,Victoria Local,Halcones City,True,0.758,75,68,2,0
+2,11,Águilas United,Halcones City,2,2,Empate,Empate,True,0.542,82,75,1,3
+2,11,Halcones City,Zorros FC,5,0,Victoria Local,Halcones City,True,0.95,75,65,0,0
+2,11,Pumas CF,Halcones City,1,0,Victoria Local,Pumas CF,True,0.641,68,75,0,1
+2,11,Leones SC,Pumas CF,2,3,Victoria Visitante,Pumas CF,True,0.364,78,68,2,1
+2,12,Lobos Atlético,Leones SC,4,6,Victoria Visitante,Leones SC,True,0.9,72,78,0,0
+2,12,Tigres FC,Zorros FC,2,0,Victoria Local,Tigres FC,True,0.933,85,65,0,0
+2,12,Pumas CF,Tigres FC,1,2,Victoria Visitante,Tigres FC,True,0.185,68,85,2,1
+2,12,Tigres FC,Lobos Atlético,0,0,Empate,Empate,True,0.95,85,72,2,0
+2,13,Cóndores United,Zorros FC,2,3,Victoria Visitante,Zorros FC,True,0.05,60,65,0,0
+2,13,Halcones City,Lobos Atlético,4,0,Victoria Local,Halcones City,True,0.56,75,72,0,0
+2,13,Tigres FC,Cóndores United,2,1,Victoria Local,Tigres FC,True,0.515,85,60,0,0
+2,13,Leones SC,Halcones City,2,4,Victoria Visitante,Halcones City,True,0.258,78,75,1,1
+2,14,Cóndores United,Leones SC,0,3,Victoria Visitante,Leones SC,True,0.219,60,78,0,0
+2,14,Halcones City,Tigres FC,1,2,Victoria Visitante,Tigres FC,True,0.591,75,85,2,1
+2,14,Tigres FC,Águilas United,3,2,Victoria Local,Tigres FC,True,0.921,85,82,2,0
+2,14,Zorros FC,Leones SC,1,1,Empate,Empate,True,0.05,65,78,1,1
+3,1,Águilas United,Zorros FC,4,3,Victoria Local,Águilas United,True,0.708,82,65,0,0
+3,1,Cóndores United,Leones SC,3,5,Victoria Visitante,Leones SC,True,0.113,60,78,0,0
+3,1,Cóndores United,Halcones City,0,2,Victoria Visitante,Halcones City,True,0.376,60,75,0,0
+3,1,Cóndores United,Pumas CF,1,2,Victoria Visitante,Pumas CF,True,0.61,60,68,0,0
+3,2,Lobos Atlético,Cóndores United,2,1,Victoria Local,Lobos Atlético,True,0.895,72,60,0,0
+3,2,Zorros FC,Pumas CF,1,2,Victoria Visitante,Pumas CF,True,0.401,65,68,0,1
+3,2,Cóndores United,Tigres FC,4,2,Victoria Local,Cóndores United,True,0.528,60,85,0,0
+3,2,Leones SC,Halcones City,0,2,Victoria Visitante,Halcones City,True,0.607,78,75,1,1
+3,3,Pumas CF,Cóndores United,3,3,Empate,Empate,True,0.632,68,60,2,1
+3,3,Águilas United,Tigres FC,1,1,Empate,Empate,True,0.948,82,85,1,0
+3,3,Pumas CF,Leones SC,4,5,Victoria Visitante,Leones SC,True,0.237,68,78,0,0
+3,3,Halcones City,Cóndores United,1,1,Empate,Empate,True,0.672,75,60,2,0
+3,4,Cóndores United,Águilas United,0,2,Victoria Visitante,Águilas United,True,0.05,60,82,0,0
+3,4,Halcones City,Pumas CF,2,2,Empate,Empate,True,0.535,75,68,0,0
+3,4,Halcones City,Leones SC,3,5,Victoria Visitante,Leones SC,True,0.247,75,78,0,1
+3,4,Halcones City,Tigres FC,5,3,Victoria Local,Halcones City,True,0.789,75,85,0,0
+3,5,Halcones City,Zorros FC,1,0,Victoria Local,Halcones City,True,0.562,75,65,1,0
+3,5,Águilas United,Leones SC,0,0,Empate,Empate,True,0.313,82,78,1,2
+3,5,Tigres FC,Zorros FC,1,2,Victoria Visitante,Zorros FC,True,0.343,85,65,0,0
+3,5,Pumas CF,Lobos Atlético,3,1,Victoria Local,Pumas CF,True,0.609,68,72,0,1
+3,6,Zorros FC,Lobos Atlético,1,1,Empate,Empate,True,0.233,65,72,1,0
+3,6,Lobos Atlético,Águilas United,0,3,Victoria Visitante,Águilas United,True,0.631,72,82,0,0
+3,6,Águilas United,Pumas CF,3,5,Victoria Visitante,Pumas CF,True,0.693,82,68,1,1
+3,6,Halcones City,Lobos Atlético,1,0,Victoria Local,Halcones City,True,0.843,75,72,2,0
+3,7,Pumas CF,Zorros FC,4,4,Empate,Empate,True,0.517,68,65,2,0
+3,7,Tigres FC,Halcones City,2,1,Victoria Local,Tigres FC,True,0.739,85,75,0,3
+3,7,Lobos Atlético,Zorros FC,1,3,Victoria Visitante,Zorros FC,True,0.562,72,65,0,0
+3,7,Zorros FC,Águilas United,2,0,Victoria Local,Zorros FC,True,0.726,65,82,1,0
+3,8,Águilas United,Lobos Atlético,2,3,Victoria Visitante,Lobos Atlético,True,0.336,82,72,0,0
+3,8,Leones SC,Zorros FC,1,3,Victoria Visitante,Zorros FC,True,0.412,78,65,0,2
+3,8,Tigres FC,Pumas CF,3,0,Victoria Local,Tigres FC,True,0.918,85,68,1,0
+3,8,Leones SC,Tigres FC,1,3,Victoria Visitante,Tigres FC,True,0.465,78,85,0,2
+3,9,Tigres FC,Águilas United,5,3,Victoria Local,Tigres FC,True,0.692,85,82,3,0
+3,9,Tigres FC,Leones SC,1,0,Victoria Local,Tigres FC,True,0.775,85,78,4,0
+3,9,Cóndores United,Lobos Atlético,3,2,Victoria Local,Cóndores United,True,0.371,60,72,0,1
+3,9,Lobos Atlético,Tigres FC,2,2,Empate,Empate,True,0.227,72,85,0,5
+3,10,Pumas CF,Tigres FC,1,3,Victoria Visitante,Tigres FC,True,0.393,68,85,0,0
+3,10,Pumas CF,Halcones City,2,3,Victoria Visitante,Halcones City,True,0.551,68,75,0,0
+3,10,Leones SC,Pumas CF,3,2,Victoria Local,Leones SC,True,0.922,78,68,0,0
+3,10,Zorros FC,Cóndores United,3,0,Victoria Local,Zorros FC,True,0.643,65,60,3,1
+3,11,Halcones City,Águilas United,1,3,Victoria Visitante,Águilas United,True,0.195,75,82,1,0
+3,11,Lobos Atlético,Pumas CF,2,3,Victoria Visitante,Pumas CF,True,0.461,72,68,0,0
+3,11,Zorros FC,Leones SC,2,2,Empate,Empate,True,0.525,65,78,4,1
+3,11,Águilas United,Halcones City,2,2,Empate,Empate,True,0.406,82,75,1,0
+3,12,Tigres FC,Cóndores United,2,1,Victoria Local,Tigres FC,True,0.763,85,60,1,0
+3,12,Leones SC,Lobos Atlético,1,2,Victoria Visitante,Lobos Atlético,True,0.452,78,72,0,0
+3,12,Lobos Atlético,Leones SC,0,0,Empate,Empate,True,0.753,72,78,1,0
+3,12,Cóndores United,Zorros FC,3,1,Victoria Local,Cóndores United,True,0.689,60,65,0,0
+3,13,Leones SC,Cóndores United,1,1,Empate,Empate,True,0.443,78,60,0,1
+3,13,Pumas CF,Águilas United,4,3,Victoria Local,Pumas CF,True,0.528,68,82,1,0
+3,13,Tigres FC,Lobos Atlético,5,4,Victoria Local,Tigres FC,True,0.769,85,72,2,0
+3,13,Leones SC,Águilas United,4,3,Victoria Local,Leones SC,True,0.715,78,82,0,0
+3,14,Zorros FC,Tigres FC,5,3,Victoria Local,Zorros FC,True,0.262,65,85,0,3
+3,14,Zorros FC,Halcones City,4,3,Victoria Local,Zorros FC,True,0.95,65,75,1,0
+3,14,Lobos Atlético,Halcones City,1,4,Victoria Visitante,Halcones City,True,0.27,72,75,0,0
+3,14,Águilas United,Cóndores United,3,0,Victoria Local,Águilas United,True,0.597,82,60,0,0
+4,1,Halcones City,Zorros FC,4,2,Victoria Local,Halcones City,True,0.693,75,65,0,0
+4,1,Lobos Atlético,Leones SC,2,0,Victoria Local,Lobos Atlético,True,0.464,72,78,0,0
+4,1,Leones SC,Águilas United,3,1,Victoria Local,Leones SC,True,0.708,78,82,0,0
+4,1,Pumas CF,Leones SC,0,0,Empate,Empate,True,0.707,68,78,0,1
+4,2,Zorros FC,Halcones City,2,0,Victoria Local,Zorros FC,True,0.435,65,75,0,1
+4,2,Tigres FC,Lobos Atlético,3,3,Empate,Empate,True,0.386,85,72,0,1
+4,2,Tigres FC,Águilas United,2,0,Victoria Local,Tigres FC,True,0.95,85,82,0,0
+4,2,Leones SC,Pumas CF,2,3,Victoria Visitante,Pumas CF,True,0.581,78,68,0,0
+4,3,Águilas United,Halcones City,4,4,Empate,Empate,True,0.811,82,75,0,0
+4,3,Lobos Atlético,Tigres FC,1,3,Victoria Visitante,Tigres FC,True,0.414,72,85,0,1
+4,3,Zorros FC,Lobos Atlético,0,2,Victoria Visitante,Lobos Atlético,True,0.878,65,72,1,0
+4,3,Zorros FC,Tigres FC,2,4,Victoria Visitante,Tigres FC,True,0.134,65,85,0,2
+4,4,Zorros FC,Pumas CF,3,1,Victoria Local,Zorros FC,True,0.619,65,68,0,1
+4,4,Halcones City,Leones SC,3,2,Victoria Local,Halcones City,True,0.681,75,78,0,0
+4,4,Cóndores United,Tigres FC,1,5,Victoria Visitante,Tigres FC,True,0.232,60,85,0,3
+4,4,Águilas United,Lobos Atlético,1,1,Empate,Empate,True,0.569,82,72,0,1
+4,5,Leones SC,Halcones City,2,3,Victoria Visitante,Halcones City,True,0.506,78,75,0,1
+4,5,Halcones City,Cóndores United,3,2,Victoria Local,Halcones City,True,0.391,75,60,2,0
+4,5,Halcones City,Lobos Atlético,1,2,Victoria Visitante,Lobos Atlético,True,0.55,75,72,3,0
+4,5,Lobos Atlético,Halcones City,6,4,Victoria Local,Lobos Atlético,True,0.524,72,75,1,0
+4,6,Leones SC,Zorros FC,1,3,Victoria Visitante,Zorros FC,True,0.612,78,65,0,1
+4,6,Tigres FC,Cóndores United,1,1,Empate,Empate,True,0.569,85,60,4,0
+4,6,Pumas CF,Zorros FC,5,3,Victoria Local,Pumas CF,True,0.55,68,65,0,2
+4,6,Zorros FC,Cóndores United,2,1,Victoria Local,Zorros FC,True,0.95,65,60,0,0
+4,7,Halcones City,Tigres FC,4,2,Victoria Local,Halcones City,True,0.95,75,85,0,0
+4,7,Águilas United,Leones SC,1,2,Victoria Visitante,Leones SC,True,0.334,82,78,0,0
+4,7,Águilas United,Zorros FC,2,1,Victoria Local,Águilas United,True,0.906,82,65,0,1
+4,7,Cóndores United,Águilas United,3,5,Victoria Visitante,Águilas United,True,0.057,60,82,0,1
+4,8,Pumas CF,Águilas United,2,2,Empate,Empate,True,0.472,68,82,1,2
+4,8,Tigres FC,Pumas CF,2,2,Empate,Empate,True,0.699,85,68,0,0
+4,8,Zorros FC,Águilas United,3,1,Victoria Local,Zorros FC,True,0.59,65,82,0,0
+4,8,Cóndores United,Pumas CF,3,5,Victoria Visitante,Pumas CF,True,0.194,60,68,0,0
+4,9,Cóndores United,Halcones City,4,2,Victoria Local,Cóndores United,True,0.455,60,75,0,1
+4,9,Águilas United,Cóndores United,3,5,Victoria Visitante,Cóndores United,True,0.717,82,60,0,1
+4,9,Halcones City,Águilas United,1,2,Victoria Visitante,Águilas United,True,0.371,75,82,0,0
+4,9,Lobos Atlético,Águilas United,1,0,Victoria Local,Lobos Atlético,True,0.704,72,82,2,1
+4,10,Cóndores United,Leones SC,1,3,Victoria Visitante,Leones SC,True,0.349,60,78,2,1
+4,10,Águilas United,Tigres FC,2,4,Victoria Visitante,Tigres FC,True,0.312,82,85,0,0
+4,10,Halcones City,Pumas CF,4,1,Victoria Local,Halcones City,True,0.574,75,68,0,1
+4,10,Lobos Atlético,Cóndores United,1,2,Victoria Visitante,Cóndores United,True,0.718,72,60,3,0
+4,11,Lobos Atlético,Pumas CF,2,1,Victoria Local,Lobos Atlético,True,0.569,72,68,0,0
+4,11,Cóndores United,Lobos Atlético,1,0,Victoria Local,Cóndores United,True,0.647,60,72,1,1
+4,11,Leones SC,Cóndores United,2,1,Victoria Local,Leones SC,True,0.69,78,60,2,2
+4,11,Pumas CF,Lobos Atlético,3,2,Victoria Local,Pumas CF,True,0.637,68,72,0,0
+4,12,Leones SC,Lobos Atlético,3,1,Victoria Local,Leones SC,True,0.611,78,72,3,0
+4,12,Zorros FC,Leones SC,1,3,Victoria Visitante,Leones SC,True,0.284,65,78,1,4
+4,12,Tigres FC,Halcones City,2,4,Victoria Visitante,Halcones City,True,0.318,85,75,1,1
+4,12,Águilas United,Pumas CF,2,1,Victoria Local,Águilas United,True,0.78,82,68,0,1
+4,13,Pumas CF,Cóndores United,3,4,Victoria Visitante,Cóndores United,True,0.544,68,60,0,0
+4,13,Pumas CF,Halcones City,4,6,Victoria Visitante,Halcones City,True,0.232,68,75,0,2
+4,13,Tigres FC,Zorros FC,4,1,Victoria Local,Tigres FC,True,0.586,85,65,0,0
+4,13,Cóndores United,Zorros FC,3,5,Victoria Visitante,Zorros FC,True,0.665,60,65,1,0
+4,14,Lobos Atlético,Zorros FC,3,3,Empate,Empate,True,0.839,72,65,0,1
+4,14,Leones SC,Tigres FC,2,2,Empate,Empate,True,0.858,78,85,5,1
+4,14,Tigres FC,Leones SC,3,2,Victoria Local,Tigres FC,True,0.438,85,78,0,0
+4,14,Pumas CF,Tigres FC,2,2,Empate,Empate,True,0.683,68,85,0,1
+5,1,Lobos Atlético,Cóndores United,1,1,Empate,Empate,True,0.355,72,60,0,0
+5,1,Pumas CF,Águilas United,2,3,Victoria Visitante,Águilas United,True,0.528,68,82,0,0
+5,1,Tigres FC,Zorros FC,3,0,Victoria Local,Tigres FC,True,0.911,85,65,0,0
+5,1,Leones SC,Pumas CF,4,1,Victoria Local,Leones SC,True,0.613,78,68,0,0
+5,2,Halcones City,Pumas CF,3,2,Victoria Local,Halcones City,True,0.549,75,68,0,0
+5,2,Lobos Atlético,Águilas United,1,4,Victoria Visitante,Águilas United,True,0.293,72,82,0,1
+5,2,Halcones City,Tigres FC,3,0,Victoria Local,Halcones City,True,0.662,75,85,1,1
+5,2,Zorros FC,Halcones City,2,2,Empate,Empate,True,0.648,65,75,0,2
+5,3,Lobos Atlético,Zorros FC,2,1,Victoria Local,Lobos Atlético,True,0.506,72,65,0,0
+5,3,Lobos Atlético,Tigres FC,3,3,Empate,Empate,True,0.294,72,85,1,0
+5,3,Tigres FC,Cóndores United,3,2,Victoria Local,Tigres FC,True,0.49,85,60,0,0
+5,3,Lobos Atlético,Pumas CF,1,2,Victoria Visitante,Pumas CF,True,0.651,72,68,0,0
+5,4,Zorros FC,Pumas CF,2,4,Victoria Visitante,Pumas CF,True,0.295,65,68,0,1
+5,4,Tigres FC,Pumas CF,3,1,Victoria Local,Tigres FC,True,0.95,85,68,1,2
+5,4,Cóndores United,Halcones City,1,2,Victoria Visitante,Halcones City,True,0.364,60,75,0,0
+5,4,Tigres FC,Águilas United,4,2,Victoria Local,Tigres FC,True,0.749,85,82,2,2
+5,5,Leones SC,Zorros FC,2,0,Victoria Local,Leones SC,True,0.688,78,65,1,0
+5,5,Pumas CF,Leones SC,5,3,Victoria Local,Pumas CF,True,0.452,68,78,0,2
+5,5,Halcones City,Leones SC,2,3,Victoria Visitante,Leones SC,True,0.762,75,78,1,0
+5,5,Zorros FC,Leones SC,0,1,Victoria Visitante,Leones SC,True,0.306,65,78,0,1
+5,6,Pumas CF,Cóndores United,0,0,Empate,Empate,True,0.278,68,60,1,0
+5,6,Cóndores United,Águilas United,2,2,Empate,Empate,True,0.23,60,82,0,0
+5,6,Halcones City,Águilas United,3,3,Empate,Empate,True,0.4,75,82,0,0
+5,6,Leones SC,Lobos Atlético,3,3,Empate,Empate,True,0.95,78,72,2,0
+5,7,Cóndores United,Lobos Atlético,1,2,Victoria Visitante,Lobos Atlético,True,0.266,60,72,0,0
+5,7,Cóndores United,Zorros FC,3,2,Victoria Local,Cóndores United,True,0.476,60,65,0,0
+5,7,Zorros FC,Cóndores United,4,6,Victoria Visitante,Cóndores United,True,0.117,65,60,0,1
+5,7,Zorros FC,Tigres FC,5,3,Victoria Local,Zorros FC,True,0.314,65,85,0,3
+5,8,Águilas United,Lobos Atlético,2,1,Victoria Local,Águilas United,True,0.319,82,72,0,1
+5,8,Pumas CF,Halcones City,1,0,Victoria Local,Pumas CF,True,0.332,68,75,0,0
+5,8,Halcones City,Cóndores United,1,3,Victoria Visitante,Cóndores United,True,0.825,75,60,0,2
+5,8,Leones SC,Águilas United,0,2,Victoria Visitante,Águilas United,True,0.356,78,82,0,1
+5,9,Cóndores United,Pumas CF,1,3,Victoria Visitante,Pumas CF,True,0.521,60,68,3,1
+5,9,Lobos Atlético,Halcones City,2,3,Victoria Visitante,Halcones City,True,0.636,72,75,0,0
+5,9,Águilas United,Zorros FC,3,2,Victoria Local,Águilas United,True,0.692,82,65,2,1
+5,9,Cóndores United,Tigres FC,1,2,Victoria Visitante,Tigres FC,True,0.51,60,85,0,0
+5,10,Halcones City,Zorros FC,3,2,Victoria Local,Halcones City,True,0.717,75,65,1,0
+5,10,Águilas United,Pumas CF,2,2,Empate,Empate,True,0.646,82,68,3,2
+5,10,Zorros FC,Lobos Atlético,1,3,Victoria Visitante,Lobos Atlético,True,0.401,65,72,0,0
+5,10,Leones SC,Cóndores United,3,5,Victoria Visitante,Cóndores United,True,0.566,78,60,0,0
+5,11,Águilas United,Halcones City,2,2,Empate,Empate,True,0.337,82,75,0,2
+5,11,Cóndores United,Leones SC,1,2,Victoria Visitante,Leones SC,True,0.59,60,78,1,0
+5,11,Zorros FC,Águilas United,0,0,Empate,Empate,True,0.567,65,82,0,0
+5,11,Pumas CF,Zorros FC,2,1,Victoria Local,Pumas CF,True,0.602,68,65,0,0
+5,12,Águilas United,Cóndores United,5,5,Empate,Empate,True,0.59,82,60,0,0
+5,12,Tigres FC,Lobos Atlético,3,0,Victoria Local,Tigres FC,True,0.628,85,72,1,1
+5,12,Pumas CF,Tigres FC,3,2,Victoria Local,Pumas CF,True,0.396,68,85,1,2
+5,12,Tigres FC,Halcones City,6,5,Victoria Local,Tigres FC,True,0.57,85,75,0,0
+5,13,Leones SC,Tigres FC,5,3,Victoria Local,Leones SC,True,0.425,78,85,1,1
+5,13,Tigres FC,Leones SC,0,2,Victoria Visitante,Leones SC,True,0.68,85,78,0,2
+5,13,Águilas United,Leones SC,2,1,Victoria Local,Águilas United,True,0.361,82,78,0,3
+5,13,Halcones City,Lobos Atlético,4,0,Victoria Local,Halcones City,True,0.619,75,72,0,0
+5,14,Pumas CF,Lobos Atlético,4,2,Victoria Local,Pumas CF,True,0.43,68,72,2,0
+5,14,Águilas United,Tigres FC,1,0,Victoria Local,Águilas United,True,0.407,82,85,1,0
+5,14,Lobos Atlético,Leones SC,2,3,Victoria Visitante,Leones SC,True,0.241,72,78,0,0
+5,14,Leones SC,Halcones City,1,2,Victoria Visitante,Halcones City,True,0.062,78,75,1,1
