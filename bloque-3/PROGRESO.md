@@ -9,13 +9,13 @@
 ## Estado General
 
 ```
-Progreso: ███░░░░░░░░░░░░░░░░░ 17% (1/6 sesiones)
+Progreso: ██████░░░░░░░░░░░░░░ 33% (2/6 sesiones)
 ```
 
 | Sesión | Notebook | Estado | Prioridad |
 |--------|----------|--------|-----------|
 | 1. EDA | `01-eda.ipynb` | ✅ Completo | - |
-| 2. Regresión Logística | `02-regresion-logistica.ipynb` | ⏳ Pendiente | Alta |
+| 2. Regresión Logística | `02-regresion-logistica.ipynb` | ✅ Completo | - |
 | 3. Árboles Decisión | `03-arboles-decision.ipynb` | ⏳ Pendiente | Media |
 | 4. Random Forest | `04-random-forest.ipynb` | ⏳ Pendiente | Media |
 | 5. XGBoost | `05-xgboost.ipynb` | ⏳ Pendiente | Media |
@@ -46,23 +46,20 @@ Progreso: ███░░░░░░░░░░░░░░░░░ 17% (1/6 
 
 ---
 
-### ⏳ Sesión 2: Regresión Logística
+### ✅ Sesión 2: Regresión Logística
 **Archivo**: `notebook/02-regresion-logistica.ipynb`
-**Estado**: No iniciada
-**Prioridad**: Alta (siguiente tarea)
+**Estado**: ✅ Completado
 
-**Tareas**:
-- [ ] Crear notebook autocontenido
-- [ ] Feature engineering inline (15 min)
-- [ ] Regresión logística (15 min)
-- [ ] Evaluación y métricas (20 min)
-- [ ] Guardar métricas para comparación (10 min)
+**Completado**:
 
-**Contenido clave**:
-- Crear features: Diferencia_Habilidad, Diferencia_Racha, Ratio_Habilidad
-- Train/test split (80/20, random_state=42)
-- LogisticRegression de sklearn
-- Matriz de confusión, accuracy
+- [x] Notebook autocontenido creado con 11 secciones
+- [x] Feature engineering inline: Diferencia_Habilidad, Diferencia_Racha, Ratio_Habilidad
+- [x] Train/test split (80/20, stratified, random_state=42)
+- [x] Modelo de Regresión Logística entrenado
+- [x] Evaluación completa: accuracy, confusion matrix, classification report
+- [x] Análisis de coeficientes (feature importance)
+- [x] Ejemplos de predicciones con probabilidades
+- [x] Métricas guardadas para comparación futura
 
 ---
 
@@ -170,6 +167,15 @@ bloque-3/
 
 ## Registro de Cambios
 
+### 2025-11-07 (Actualización 4)
+
+- ✅ **SESIÓN 2 COMPLETADA**: Regresión Logística notebook finalizado
+- ✅ Feature engineering inline con 3 nuevas variables
+- ✅ Modelo baseline entrenado y evaluado
+- ✅ 11 secciones con teoría, práctica y ejemplos
+- ✅ Métricas guardadas para comparación
+- ✅ Progreso: 33% (2/6 sesiones)
+
 ### 2025-11-07 (Actualización 3)
 
 - ✅ **SESIÓN 1 COMPLETADA**: EDA notebook finalizado
@@ -197,8 +203,8 @@ bloque-3/
 
 ## Métricas
 
-**Notebooks**: 1/6 completados (17%)
-**Estimado para completar**: 14 horas (~2 semanas)
+**Notebooks**: 2/6 completados (33%)
+**Estimado para completar**: ~10 horas (~1.5 semanas)
 
 ---
 
