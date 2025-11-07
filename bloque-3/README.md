@@ -5,8 +5,8 @@
 El Bloque 3 introduce a los estudiantes de preparatoria al mundo del modelado predictivo y machine learning mediante el contexto del fútbol. Utilizando una **liga de fútbol ficticia** de 8 equipos, los estudiantes aprenden a predecir resultados de partidos mediante diferentes técnicas de clasificación.
 
 **Público objetivo**: Estudiantes de preparatoria (15-18 años) sin experiencia previa en machine learning
-**Duración**: 7 sesiones de 1 hora cada una
-**Enfoque pedagógico**: Aprendizaje progresivo y modular con código reutilizable
+**Duración**: 6 sesiones de 1 hora cada una
+**Enfoque pedagógico**: Aprendizaje progresivo con notebooks autocontenidos
 **Herramientas**: Python, pandas, numpy, matplotlib, seaborn, scikit-learn, xgboost
 
 ## Objetivo del Bloque
@@ -38,46 +38,41 @@ El Bloque 3 utiliza una **narrativa progresiva y coherente** basada en una liga 
 
 ---
 
-## Estructura Modular del Curso
+## Estructura del Curso
 
 ### Organización de Archivos
 
 ```
 bloque-3/
 ├── README.md                          # Este archivo - Plan general del curso
-├── PROGRESO.md                        # Registro de avance (actualizar después de cada sesión)
+├── PROGRESO.md                        # Registro de avance
 │
 ├── data/                              # 📊 Datasets centralizados
 │   ├── datos_liga_futbol.csv         # Dataset principal: 281 partidos de 5 temporadas
 │   ├── generar_datos_liga.py         # Script para generar datos sintéticos
 │   └── DICCIONARIO_DATOS.md          # Documentación completa del dataset
 │
-├── src/                               # 🔧 Código reutilizable
-│   ├── __init__.py                   # Inicializar como módulo Python
-│   ├── features.py                   # 🎯 Feature engineering (usar en todos los notebooks)
-│   ├── evaluacion.py                 # 📊 Funciones de evaluación y visualización
-│   └── utils.py                      # 🛠️ Utilidades generales
-│
-└── notebook/                          # 📓 Notebooks de trabajo (1 hora cada uno)
+└── notebook/                          # 📓 Notebooks autocontenidos (1 hora cada uno)
     ├── 01-eda.ipynb                  # ✅ Sesión 1: Análisis Exploratorio
-    ├── 02-feature-engineering.ipynb  # ⏳ Sesión 2: Creación de características
-    ├── 03-regresion-logistica.ipynb  # ⏳ Sesión 3: Modelo baseline
-    ├── 04-arboles-decision.ipynb     # ⏳ Sesión 4: Árboles de decisión
-    ├── 05-random-forest.ipynb        # ⏳ Sesión 5: Bosques aleatorios
-    ├── 06-xgboost.ipynb              # ⏳ Sesión 6: Gradient boosting
-    └── 07-comparacion-modelos.ipynb  # ⏳ Sesión 7: Comparación final
+    ├── 02-regresion-logistica.ipynb  # ⏳ Sesión 2: Modelo baseline + feature engineering
+    ├── 03-arboles-decision.ipynb     # ⏳ Sesión 3: Árboles de decisión
+    ├── 04-random-forest.ipynb        # ⏳ Sesión 4: Bosques aleatorios
+    ├── 05-xgboost.ipynb              # ⏳ Sesión 5: Gradient boosting
+    └── 06-comparacion-modelos.ipynb  # ⏳ Sesión 6: Comparación final
 ```
+
+**Nota**: Cada notebook es completamente autocontenido. El feature engineering se hace inline en cada notebook según sea necesario.
 
 ---
 
-## Plan de Trabajo: 7 Sesiones de 1 Hora
+## Plan de Trabajo: 6 Sesiones de 1 Hora
 
 ### 📊 Sesión 1: Análisis Exploratorio de Datos (EDA)
 **Estado**: ✅ Completada
 **Archivo**: `notebook/01-eda.ipynb`
-**Duración**: ~50-60 minutos
+**Duración**: ~60 minutos
 
-**Objetivos de aprendizaje**:
+**Objetivos**:
 - Comprender la estructura del dataset de la liga
 - Identificar patrones en victorias locales vs visitantes
 - Analizar distribución de goles y resultados
@@ -93,469 +88,206 @@ bloque-3/
 **Entregables**:
 - Dataset limpio y comprendido
 - 5-7 visualizaciones clave
-- Lista de insights principales
+- Insights principales
+
+**Nota**: Simplificar a 6-8 secciones para caber en 1 hora
 
 ---
 
-### 🎯 Sesión 2: Ingeniería de Características
+### 📈 Sesión 2: Regresión Logística (Modelo Baseline)
 **Estado**: ⏳ Pendiente
-**Archivo**: `notebook/02-feature-engineering.ipynb`
+**Archivo**: `notebook/02-regresion-logistica.ipynb`
 **Duración**: ~60 minutos
 
-**Objetivos de aprendizaje**:
-- Entender qué es feature engineering y por qué es importante
-- Crear características derivadas del dataset base
-- Guardar funciones reutilizables para otros notebooks
+**Objetivos**:
+- Entender clasificación multiclase
+- Crear features básicas inline
+- Construir modelo baseline
+- Evaluar métricas básicas
 
 **Contenido**:
-1. **Features básicas** (15 min):
-   - Diferencia de habilidades entre equipos
-   - Ventaja de jugar en casa (binaria)
-   - Diferencia de rachas
+1. **Feature Engineering básico** (15 min):
+   - Crear features: Diferencia_Habilidad, Diferencia_Racha, Ratio_Habilidad
+   - Train/test split (80/20)
+   - Seleccionar features para el modelo
 
-2. **Features avanzadas** (20 min):
-   - Ratio de habilidades
-   - Momentum del equipo (racha normalizada)
-   - Interacciones entre variables
-
-3. **Módulo reutilizable** (15 min):
-   - Crear funciones en `src/features.py`
-   - Documentar cada función
-   - Probar con dataset completo
-
-4. **Preparación para modelado** (10 min):
-   - Split train/test (80/20)
-   - Guardar datasets procesados
-   - Verificar no hay data leakage
-
-**Entregables**:
-- `src/features.py` con funciones documentadas
-- Dataset con nuevas características
-- Train/test split guardados
-
-**Código ejemplo** (features.py):
-```python
-def crear_features_basicas(df):
-    """Crea características básicas para predicción."""
-    df['Diferencia_Habilidad'] = df['Habilidad_Local'] - df['Habilidad_Visitante']
-    df['Diferencia_Racha'] = df['Racha_Local'] - df['Racha_Visitante']
-    return df
-
-def crear_features_avanzadas(df):
-    """Crea características avanzadas."""
-    df['Ratio_Habilidad'] = df['Habilidad_Local'] / (df['Habilidad_Visitante'] + 1)
-    df['Momentum_Local'] = df['Racha_Local'] * df['Habilidad_Local'] / 100
-    return df
-```
-
----
-
-### 🎯 Sesión 3: Regresión Logística (Modelo Baseline)
-**Estado**: ⏳ Pendiente
-**Archivo**: `notebook/03-regresion-logistica.ipynb`
-**Duración**: ~60 minutos
-
-**Objetivos de aprendizaje**:
-- Entender qué es clasificación multiclase
-- Construir un modelo baseline simple
-- Evaluar métricas básicas (accuracy, matriz de confusión)
-
-**Contenido**:
-1. **Introducción a clasificación** (10 min):
+2. **Regresión Logística** (15 min):
    - ¿Qué es clasificación multiclase?
-   - Diferencia con clasificación binaria
-   - ¿Por qué regresión logística como baseline?
-
-2. **Construcción del modelo** (20 min):
-   - Importar features desde `src/features.py`
    - Entrenar modelo con sklearn
    - Predicciones en test set
 
 3. **Evaluación** (20 min):
    - Accuracy general
    - Matriz de confusión
-   - Accuracy por clase (Local, Visitante, Empate)
+   - Accuracy por clase (Local/Visitante/Empate)
    - ¿Qué clase predice mejor/peor?
 
 4. **Interpretación** (10 min):
    - Coeficientes del modelo
    - Features más importantes
-   - Discusión de resultados
+   - Guardar métricas para comparación
 
 **Entregables**:
-- Modelo entrenado y guardado
-- Reporte de métricas baseline
+- Modelo entrenado
+- Métricas baseline
 - Interpretación de coeficientes
 
-**Métricas esperadas**:
-- Accuracy: ~50-60%
-- Clase mejor predicha: Victoria Local
-- Clase peor predicha: Empate
+**Métricas esperadas**: Accuracy ~50-60%, Empate difícil de predecir
 
 ---
 
-### 🌳 Sesión 4: Árboles de Decisión
+### 🌳 Sesión 3: Árboles de Decisión
 **Estado**: ⏳ Pendiente
-**Archivo**: `notebook/04-arboles-decision.ipynb`
+**Archivo**: `notebook/03-arboles-decision.ipynb`
 **Duración**: ~60 minutos
 
-**Objetivos de aprendizaje**:
-- Comprender cómo funcionan los árboles de decisión
+**Objetivos**:
+- Comprender árboles de decisión
 - Visualizar reglas de decisión
 - Comparar con regresión logística
 
 **Contenido**:
-1. **Teoría básica** (15 min):
-   - ¿Qué es un árbol de decisión?
-   - Analogía con preguntas de sí/no
-   - Ventajas: interpretabilidad, no linealidad
+1. **Cargar datos** (5 min): Mismo preprocesamiento que Sesión 2
+2. **Teoría básica** (10 min): ¿Qué es un árbol? Analogía con preguntas sí/no
+3. **Entrenamiento** (15 min): DecisionTreeClassifier, hiperparámetros básicos
+4. **Visualización del árbol** (15 min): Dibujar e interpretar reglas
+5. **Evaluación** (15 min): Comparar con regresión logística
 
-2. **Entrenamiento** (15 min):
-   - DecisionTreeClassifier de sklearn
-   - Hiperparámetros básicos (max_depth, min_samples_split)
-   - Entrenar con mismos datos que Sesión 3
+**Entregables**: Árbol entrenado, visualización, tabla comparativa
 
-3. **Visualización del árbol** (15 min):
-   - Dibujar árbol de decisión
-   - Interpretar reglas principales
-   - ¿Qué features usa primero?
-
-4. **Evaluación y comparación** (15 min):
-   - Mismas métricas que Sesión 3
-   - Comparar con regresión logística
-   - Discusión: ¿Cuál es mejor y por qué?
-
-**Entregables**:
-- Árbol de decisión entrenado
-- Visualización del árbol
-- Tabla comparativa con modelo baseline
-
-**Conceptos clave**:
-- Overfitting vs underfitting
-- Importancia de features
-- Trade-off interpretabilidad vs precisión
+**Conceptos clave**: Overfitting, importancia de features
 
 ---
 
-### 🌲 Sesión 5: Bosques Aleatorios (Random Forest)
+### 🌲 Sesión 4: Bosques Aleatorios (Random Forest)
 **Estado**: ⏳ Pendiente
-**Archivo**: `notebook/05-random-forest.ipynb`
+**Archivo**: `notebook/04-random-forest.ipynb`
 **Duración**: ~60 minutos
 
-**Objetivos de aprendizaje**:
+**Objetivos**:
 - Entender ensemble learning
 - Implementar Random Forest
 - Mejorar predicciones mediante votación
 
 **Contenido**:
-1. **Concepto de ensemble** (10 min):
-   - Analogía: "consultar a varios expertos"
-   - Votación por mayoría
-   - ¿Por qué funciona mejor?
+1. **Preparación** (5 min): Cargar datos preprocesados
+2. **Concepto ensemble** (10 min): Analogía "consultar varios expertos"
+3. **Random Forest** (15 min): Entrenar con sklearn
+4. **Feature importance** (15 min): ¿Qué variables son más importantes?
+5. **Comparación** (15 min): Comparar con 2 modelos anteriores
 
-2. **Random Forest** (15 min):
-   - Múltiples árboles aleatorios
-   - Parámetros: n_estimators, max_features
-   - Entrenar con sklearn
+**Entregables**: Random Forest entrenado, feature importance, tabla comparativa (3 modelos)
 
-3. **Evaluación** (20 min):
-   - Métricas completas
-   - Feature importance
-   - Comparar con modelos anteriores
-
-4. **Análisis de errores** (15 min):
-   - ¿Qué partidos predice mal?
-   - ¿Hay patrones en los errores?
-   - Ideas para mejorar
-
-**Entregables**:
-- Random Forest entrenado
-- Gráfico de feature importance
-- Tabla comparativa (3 modelos)
-
-**Métricas esperadas**:
-- Accuracy: ~60-70%
-- Mejor que modelos anteriores
-- Empates aún difíciles de predecir
+**Métricas esperadas**: Accuracy ~60-70%
 
 ---
 
-### 🚀 Sesión 6: XGBoost (Gradient Boosting)
+### 🚀 Sesión 5: XGBoost (Gradient Boosting)
 **Estado**: ⏳ Pendiente
-**Archivo**: `notebook/06-xgboost.ipynb`
+**Archivo**: `notebook/05-xgboost.ipynb`
 **Duración**: ~60 minutos
 
-**Objetivos de aprendizaje**:
+**Objetivos**:
 - Introducción a gradient boosting
 - Usar XGBoost para clasificación
 - Optimizar hiperparámetros básicos
 
 **Contenido**:
-1. **Teoría de boosting** (10 min):
-   - Diferencia con Random Forest
-   - Aprendizaje secuencial
-   - Corregir errores de modelos anteriores
+1. **Preparación** (5 min): Cargar datos
+2. **Teoría boosting** (10 min): Diferencia con Random Forest
+3. **XGBoost** (20 min): Entrenar modelo, parámetros básicos
+4. **Tuning básico** (10 min): Probar 2-3 configuraciones
+5. **Comparación** (15 min): Comparar con 3 modelos anteriores
 
-2. **XGBoost implementation** (20 min):
-   - Instalación y configuración
-   - Parámetros básicos: n_estimators, learning_rate, max_depth
-   - Entrenar modelo
+**Entregables**: XGBoost optimizado, tabla comparativa (4 modelos)
 
-3. **Evaluación** (15 min):
-   - Métricas completas
-   - Feature importance
-   - Comparar con 3 modelos anteriores
-
-4. **Tuning básico** (15 min):
-   - Probar 2-3 configuraciones
-   - Grid search simple
-   - Seleccionar mejor modelo
-
-**Entregables**:
-- XGBoost entrenado y optimizado
-- Feature importance de XGBoost
-- Tabla comparativa (4 modelos)
-
-**Métricas esperadas**:
-- Accuracy: ~65-75%
-- Posiblemente el mejor modelo
-- Mejor predicción de empates
+**Métricas esperadas**: Accuracy ~65-75%, posiblemente el mejor
 
 ---
 
-### 📊 Sesión 7: Comparación y Conclusiones
+### 📊 Sesión 6: Comparación y Conclusiones
 **Estado**: ⏳ Pendiente
-**Archivo**: `notebook/07-comparacion-modelos.ipynb`
+**Archivo**: `notebook/06-comparacion-modelos.ipynb`
 **Duración**: ~60 minutos
 
-**Objetivos de aprendizaje**:
-- Comparar todos los modelos de manera sistemática
+**Objetivos**:
+- Comparar los 4 modelos de manera sistemática
 - Entender trade-offs entre modelos
-- Presentar recomendaciones finales
+- Recomendar el mejor modelo
 
 **Contenido**:
-1. **Carga de modelos** (10 min):
-   - Cargar 4 modelos entrenados
-   - Verificar métricas guardadas
-
-2. **Comparación sistemática** (25 min):
+1. **Carga de métricas** (5 min): Recopilar resultados de sesiones anteriores
+2. **Comparación visual** (25 min):
    - Tabla resumen con todas las métricas
-   - Gráficos comparativos:
-     - Accuracy por modelo
-     - Accuracy por clase (Local/Visitante/Empate)
-     - Matriz de confusión de cada modelo
-     - Feature importance comparada
-   - Análisis de tiempo de entrenamiento
+   - Gráfico de accuracy por modelo
+   - Gráfico de accuracy por clase (Local/Visitante/Empate)
+   - Comparación de feature importance
+3. **Casos difíciles** (15 min): Analizar 3-5 partidos donde los modelos difieren
+4. **Conclusiones** (15 min): ¿Qué modelo es mejor? ¿Qué aprendimos?
 
-3. **Casos de estudio** (15 min):
-   - Seleccionar 5 partidos "difíciles"
-   - Ver predicciones de cada modelo
-   - Analizar por qué difieren
+**Entregables**: Dashboard comparativo, recomendación final
 
-4. **Conclusiones y recomendaciones** (10 min):
-   - ¿Qué modelo es mejor?
-   - ¿Depende del contexto?
-   - ¿Qué aprendimos sobre predicción de fútbol?
-   - Próximos pasos para mejorar
-
-**Entregables**:
-- Dashboard comparativo completo
-- Reporte ejecutivo (1-2 páginas)
-- Recomendación de modelo final
-
-**Visualizaciones clave**:
-```python
-# Comparación de accuracy
-modelos = ['Reg. Logística', 'Árbol', 'Random Forest', 'XGBoost']
-accuracy = [0.56, 0.62, 0.69, 0.72]
-
-# Comparación por clase
-resultados = {
-    'Victoria Local': [0.65, 0.71, 0.78, 0.80],
-    'Victoria Visitante': [0.58, 0.64, 0.70, 0.73],
-    'Empate': [0.35, 0.42, 0.50, 0.58]
-}
-```
+**Visualización clave**: Barras comparando accuracy de 4 modelos
 
 ---
 
 ## Principios Clave del Curso
 
-### 🎯 Modularidad y Reutilización
-- **Un módulo, un objetivo**: Cada notebook cubre un modelo específico
-- **Código DRY**: Feature engineering en `src/features.py` reutilizable en todos los notebooks
-- **Progresión clara**: De modelos simples (logística) a complejos (XGBoost)
+### 🎯 Simplicidad
+- **Notebooks autocontenidos**: Todo el código necesario en cada notebook
+- **Sin dependencias externas**: No hay módulos src/, todo inline
+- **Copiar/pegar permitido**: Feature engineering se repite en cada notebook (más didáctico)
 
 ### ⏱️ Sesiones de 1 Hora
-- **50-60 minutos** de contenido efectivo
-- **10 minutos** al final para preguntas y resumen
+- **~60 minutos** de contenido total
 - **Entregables claros** al final de cada sesión
+- **Progresión clara**: De simple (logística) a complejo (XGBoost)
 
 ### 📊 Evaluación Consistente
-- **Mismas métricas** en todos los modelos (accuracy, matriz confusión)
-- **Mismo train/test split** para comparación justa
-- **Visualizaciones estandarizadas** usando `src/evaluacion.py`
+- **Mismas métricas** en todos los modelos
+- **Mismo train/test split** (usar random_state=42)
+- **Comparación justa** entre modelos
 
 ### 🎓 Enfoque Didáctico
-- **Teoría mínima necesaria**: 10-15 minutos por sesión
-- **Práctica inmediata**: Código ejecutable desde el primer minuto
-- **Aprendizaje activo**: Estudiantes ejecutan y modifican código
-- **Comparación constante**: ¿Es mejor que el modelo anterior?
+- **Teoría mínima**: 5-10 minutos por sesión
+- **Práctica inmediata**: Código ejecutable desde el minuto 1
+- **Comparación constante**: ¿Es mejor que el anterior?
 
 ---
 
-## Próximos Pasos Inmediatos
+## Próximos Pasos
 
-### 🔴 Prioridad 1: Simplificar EDA (Sesión 1)
-**Estado actual**: El notebook `01-eda.ipynb` es demasiado extenso (15 secciones)
-**Acción requerida**: Reducir a 6-8 secciones esenciales para 1 hora
+### Prioridad 1: Simplificar EDA ✅
+**Archivo**: `notebook/01-eda.ipynb` (ya existe como `eda.ipynb`)
+**Acción**: Reducir de 15 a 6-8 secciones esenciales
 
-**Secciones a mantener**:
-1. Carga de datos e inspección inicial
-2. Calidad de datos (nulos, duplicados)
-3. Análisis de resultados (Victoria L/V/Empate)
-4. Análisis de goles
-5. Ventaja de jugar en casa
-6. Correlaciones básicas
-7. Resumen ejecutivo
+### Prioridad 2: Crear Notebooks de Modelos ⏳
+**Orden sugerido**:
+1. `02-regresion-logistica.ipynb` - Baseline + feature engineering inline
+2. `03-arboles-decision.ipynb` - Visualización de reglas
+3. `04-random-forest.ipynb` - Ensemble learning
+4. `05-xgboost.ipynb` - Gradient boosting
+5. `06-comparacion-modelos.ipynb` - Dashboard final
 
-**Secciones a mover/eliminar**:
-- Análisis por temporada (mover a apéndice)
-- Análisis exhaustivo de equipos (innecesario para predicción)
-- Análisis detallado de rachas (ver en feature engineering)
-- Probabilidades de victoria (demasiado avanzado)
-- Tabla general de equipos (mover a apéndice)
-
-### 🟡 Prioridad 2: Crear Módulo de Features
-**Archivo**: `src/features.py`
-**Contenido**:
-```python
-"""
-Feature Engineering para Predicción de Resultados de Fútbol
-Bloque 3: Modelado Predictivo
-"""
-
-import pandas as pd
-import numpy as np
-
-def crear_features_basicas(df):
-    """
-    Crea características básicas para predicción.
-
-    Args:
-        df: DataFrame con datos de partidos
-
-    Returns:
-        DataFrame con nuevas columnas de features
-    """
-    df = df.copy()
-
-    # Diferencia de habilidades
-    df['Diferencia_Habilidad'] = df['Habilidad_Local'] - df['Habilidad_Visitante']
-
-    # Diferencia de rachas
-    df['Diferencia_Racha'] = df['Racha_Local'] - df['Racha_Visitante']
-
-    # Ventaja de casa (ya existe como Juega_En_Casa)
-
-    return df
-
-def crear_features_avanzadas(df):
-    """
-    Crea características avanzadas (interacciones, ratios).
-
-    Args:
-        df: DataFrame con features básicas
-
-    Returns:
-        DataFrame con features avanzadas adicionales
-    """
-    df = df.copy()
-
-    # Ratio de habilidades (evitar división por cero)
-    df['Ratio_Habilidad'] = df['Habilidad_Local'] / (df['Habilidad_Visitante'] + 1)
-
-    # Momentum (racha * habilidad normalizada)
-    df['Momentum_Local'] = df['Racha_Local'] * df['Habilidad_Local'] / 100
-    df['Momentum_Visitante'] = df['Racha_Visitante'] * df['Habilidad_Visitante'] / 100
-
-    # Diferencia de momentum
-    df['Diferencia_Momentum'] = df['Momentum_Local'] - df['Momentum_Visitante']
-
-    return df
-
-def preparar_datos_modelado(df, test_size=0.2, random_state=42):
-    """
-    Prepara datos para modelado: features, target, train/test split.
-
-    Args:
-        df: DataFrame con todas las features
-        test_size: Proporción para test set
-        random_state: Semilla aleatoria
-
-    Returns:
-        X_train, X_test, y_train, y_test
-    """
-    from sklearn.model_selection import train_test_split
-
-    # Features a usar
-    feature_columns = [
-        'Habilidad_Local', 'Habilidad_Visitante',
-        'Racha_Local', 'Racha_Visitante',
-        'Probabilidad_Victoria_Local',
-        'Diferencia_Habilidad', 'Diferencia_Racha',
-        'Ratio_Habilidad',
-        'Momentum_Local', 'Momentum_Visitante', 'Diferencia_Momentum'
-    ]
-
-    X = df[feature_columns]
-    y = df['Resultado']  # 'Victoria Local', 'Victoria Visitante', 'Empate'
-
-    return train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
-```
-
-### 🟡 Prioridad 3: Crear Módulo de Evaluación
-**Archivo**: `src/evaluacion.py`
-**Contenido**: Funciones para visualizar métricas de manera consistente
-
-### 🟢 Prioridad 4-7: Crear Notebooks de Modelos
-Seguir el plan detallado en Sesiones 3-7
+**Cada notebook debe ser completamente independiente y ejecutable.**
 
 ---
 
-## Calendario Sugerido de Implementación
+## Calendario Sugerido
 
-### Fase 1: Fundamentos (Semana 1)
-- [ ] Día 1: Simplificar EDA notebook
-- [ ] Día 2: Crear `src/features.py`
-- [ ] Día 3: Crear `src/evaluacion.py`
-- [ ] Día 4: Crear notebook feature engineering
-- [ ] Día 5: Testing y revisión
+### Semana 1: Fundamentos
+- Día 1-2: Simplificar EDA
+- Día 3-4: Notebook regresión logística
+- Día 5: Testing
 
-### Fase 2: Modelos Básicos (Semana 2)
-- [ ] Día 1-2: Notebook regresión logística
-- [ ] Día 3-4: Notebook árboles de decisión
-- [ ] Día 5: Testing y ajustes
+### Semana 2: Modelos Básicos y Avanzados
+- Día 1-2: Notebooks árboles de decisión y random forest
+- Día 3-4: Notebook XGBoost
+- Día 5: Testing
 
-### Fase 3: Modelos Avanzados (Semana 3)
-- [ ] Día 1-2: Notebook Random Forest
-- [ ] Día 3-4: Notebook XGBoost
-- [ ] Día 5: Testing y ajustes
-
-### Fase 4: Integración (Semana 4)
-- [ ] Día 1-3: Notebook comparación de modelos
-- [ ] Día 4-5: Documentación final y README
-
----
-
-## Compatibilidad con Estructura Anterior
-
-Este nuevo enfoque modular **complementa** (no reemplaza) la estructura de semanas 10-15 existente:
-
-- **Nueva estructura**: Enfoque modular para enseñanza práctica (7 sesiones de 1 hora)
-- **Estructura anterior**: Material de referencia y contexto narrativo más amplio
-
-Ambas coexisten en `bloque-3/` y los instructores pueden elegir cuál usar según el contexto.
+### Semana 3: Integración
+- Día 1-2: Notebook comparación
+- Día 3: Testing y ajustes finales
 
 ---
 

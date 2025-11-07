@@ -1,271 +1,207 @@
 # Progreso del Bloque 3: Modelado Predictivo
 
 **Última actualización**: Noviembre 2025
-**Objetivo**: Crear 7 sesiones modulares de 1 hora para enseñar modelado predictivo
+**Objetivo**: Crear 6 sesiones de 1 hora con notebooks autocontenidos
+**Enfoque**: SIMPLE - Todo inline, sin módulos externos
 
 ---
 
 ## Estado General
 
 ```
-Progreso: ████░░░░░░░░░░░░░░░░ 15% (1/7 sesiones)
+Progreso: ███░░░░░░░░░░░░░░░░░ 17% (1/6 sesiones)
 ```
 
-| Fase | Estado | Completado |
-|------|--------|------------|
-| **Fundamentos** | 🟡 En progreso | 1/4 |
-| **Modelos Básicos** | ⚪ Pendiente | 0/2 |
-| **Modelos Avanzados** | ⚪ Pendiente | 0/2 |
-| **Integración** | ⚪ Pendiente | 0/1 |
+| Sesión | Notebook | Estado | Prioridad |
+|--------|----------|--------|-----------|
+| 1. EDA | `01-eda.ipynb` | ✅ Existe (simplificar) | Alta |
+| 2. Regresión Logística | `02-regresion-logistica.ipynb` | ⏳ Pendiente | Alta |
+| 3. Árboles Decisión | `03-arboles-decision.ipynb` | ⏳ Pendiente | Media |
+| 4. Random Forest | `04-random-forest.ipynb` | ⏳ Pendiente | Media |
+| 5. XGBoost | `05-xgboost.ipynb` | ⏳ Pendiente | Media |
+| 6. Comparación | `06-comparacion-modelos.ipynb` | ⏳ Pendiente | Baja |
 
 ---
 
-## Fase 1: Fundamentos (En Progreso)
+## Detalle por Sesión
 
 ### ✅ Sesión 1: EDA
-- [x] Notebook creado: `notebook/01-eda.ipynb` (anteriormente `main.ipynb`)
+**Archivo**: `notebook/eda.ipynb` (renombrar a `01-eda.ipynb`)
+**Estado**: Existe pero debe simplificarse
+
+**Completado**:
+- [x] Notebook creado
 - [x] Dataset disponible: `data/datos_liga_futbol.csv`
 - [x] Diccionario de datos: `data/DICCIONARIO_DATOS.md`
-- [ ] **PENDIENTE**: Simplificar notebook a 6-8 secciones para 1 hora
-- [ ] **PENDIENTE**: Probar en clase con estudiantes
 
-**Notas**:
-- Notebook actual tiene 15 secciones - demasiado extenso
-- Reducir enfoque a lo esencial para predicción
-- Mover análisis detallado a apéndice opcional
+**Pendiente**:
+- [ ] Simplificar de 15 a 6-8 secciones
+- [ ] Mantener solo lo esencial:
+  - Carga e inspección
+  - Calidad de datos
+  - Análisis de resultados
+  - Análisis de goles
+  - Ventaja local
+  - Correlaciones
+  - Resumen ejecutivo
+- [ ] Probar en clase (60 minutos)
 
 ---
 
-### ⏳ Sesión 2: Feature Engineering
+### ⏳ Sesión 2: Regresión Logística
+**Archivo**: `notebook/02-regresion-logistica.ipynb`
 **Estado**: No iniciada
 **Prioridad**: Alta (siguiente tarea)
 
 **Tareas**:
-- [ ] Crear módulo `src/features.py` con funciones reutilizables
-- [ ] Crear módulo `src/__init__.py`
-- [ ] Crear notebook `notebook/02-feature-engineering.ipynb`
-- [ ] Documentar funciones con docstrings
-- [ ] Crear ejemplos de uso
-- [ ] Probar funciones con dataset completo
-
-**Entregables esperados**:
-```python
-# src/features.py debe incluir:
-- crear_features_basicas(df)
-- crear_features_avanzadas(df)
-- preparar_datos_modelado(df)
-```
-
----
-
-### ⏳ Módulo de Evaluación
-**Estado**: No iniciado
-**Prioridad**: Alta (paralelo a Sesión 2)
-
-**Tareas**:
-- [ ] Crear módulo `src/evaluacion.py`
-- [ ] Funciones para matriz de confusión
-- [ ] Funciones para gráficos comparativos
-- [ ] Funciones para reportes de métricas
-- [ ] Documentar con ejemplos
-
----
-
-### ⏳ Módulo de Utilidades
-**Estado**: No iniciado
-**Prioridad**: Media
-
-**Tareas**:
-- [ ] Crear módulo `src/utils.py`
-- [ ] Funciones de carga de datos
-- [ ] Funciones de guardado de modelos
-- [ ] Funciones auxiliares comunes
-
----
-
-## Fase 2: Modelos Básicos (Pendiente)
-
-### ⏳ Sesión 3: Regresión Logística
-**Estado**: No iniciada
-**Archivo**: `notebook/03-regresion-logistica.ipynb`
-
-**Tareas**:
-- [ ] Crear estructura del notebook
-- [ ] Sección teórica (10 min)
-- [ ] Implementación del modelo (20 min)
+- [ ] Crear notebook autocontenido
+- [ ] Feature engineering inline (15 min)
+- [ ] Regresión logística (15 min)
 - [ ] Evaluación y métricas (20 min)
-- [ ] Interpretación (10 min)
-- [ ] Guardar modelo entrenado
-- [ ] Probar en clase
+- [ ] Guardar métricas para comparación (10 min)
+
+**Contenido clave**:
+- Crear features: Diferencia_Habilidad, Diferencia_Racha, Ratio_Habilidad
+- Train/test split (80/20, random_state=42)
+- LogisticRegression de sklearn
+- Matriz de confusión, accuracy
 
 ---
 
-### ⏳ Sesión 4: Árboles de Decisión
+### ⏳ Sesión 3: Árboles de Decisión
+**Archivo**: `notebook/03-arboles-decision.ipynb`
 **Estado**: No iniciada
-**Archivo**: `notebook/04-arboles-decision.ipynb`
 
 **Tareas**:
-- [ ] Crear estructura del notebook
-- [ ] Sección teórica (15 min)
-- [ ] Implementación del modelo (15 min)
-- [ ] Visualización del árbol (15 min)
-- [ ] Comparación con regresión logística (15 min)
-- [ ] Probar en clase
+- [ ] Crear notebook autocontenido
+- [ ] Mismo preprocesamiento que Sesión 2
+- [ ] DecisionTreeClassifier
+- [ ] Visualización del árbol
+- [ ] Comparar con regresión logística
 
 ---
 
-## Fase 3: Modelos Avanzados (Pendiente)
-
-### ⏳ Sesión 5: Random Forest
+### ⏳ Sesión 4: Random Forest
+**Archivo**: `notebook/04-random-forest.ipynb`
 **Estado**: No iniciada
-**Archivo**: `notebook/05-random-forest.ipynb`
 
 **Tareas**:
-- [ ] Crear estructura del notebook
-- [ ] Explicar ensemble learning
-- [ ] Implementar Random Forest
+- [ ] Crear notebook autocontenido
+- [ ] RandomForestClassifier
 - [ ] Feature importance
-- [ ] Comparar con modelos anteriores
-- [ ] Probar en clase
+- [ ] Comparar con 2 modelos anteriores
 
 ---
 
-### ⏳ Sesión 6: XGBoost
+### ⏳ Sesión 5: XGBoost
+**Archivo**: `notebook/05-xgboost.ipynb`
 **Estado**: No iniciada
-**Archivo**: `notebook/06-xgboost.ipynb`
 
 **Tareas**:
-- [ ] Crear estructura del notebook
-- [ ] Explicar gradient boosting
-- [ ] Implementar XGBoost
-- [ ] Tuning básico de hiperparámetros
-- [ ] Comparar con modelos anteriores
-- [ ] Probar en clase
+- [ ] Crear notebook autocontenido
+- [ ] XGBClassifier
+- [ ] Tuning básico
+- [ ] Comparar con 3 modelos anteriores
 
 ---
 
-## Fase 4: Integración (Pendiente)
-
-### ⏳ Sesión 7: Comparación de Modelos
+### ⏳ Sesión 6: Comparación Final
+**Archivo**: `notebook/06-comparacion-modelos.ipynb`
 **Estado**: No iniciada
-**Archivo**: `notebook/07-comparacion-modelos.ipynb`
 
 **Tareas**:
-- [ ] Crear estructura del notebook
-- [ ] Cargar todos los modelos
-- [ ] Dashboard comparativo
+- [ ] Crear notebook de comparación
+- [ ] Dashboard con 4 modelos
 - [ ] Análisis de casos difíciles
-- [ ] Recomendaciones finales
-- [ ] Reporte ejecutivo
-- [ ] Probar en clase
+- [ ] Recomendación final
 
 ---
 
-## Estructura de Archivos Actual
+## Estructura de Archivos
 
 ```
 bloque-3/
 ├── README.md ✅
-├── PROGRESO.md ✅ (este archivo)
+├── PROGRESO.md ✅
 │
 ├── data/ ✅
 │   ├── datos_liga_futbol.csv ✅
 │   ├── generar_datos_liga.py ✅
 │   └── DICCIONARIO_DATOS.md ✅
 │
-├── src/ ⏳ (carpeta a crear)
-│   ├── __init__.py ⏳
-│   ├── features.py ⏳
-│   ├── evaluacion.py ⏳
-│   └── utils.py ⏳
-│
-└── notebook/ 🟡 (1/7 notebooks)
-    ├── eda.ipynb ✅ (renombrado de 01-eda.ipynb)
-    ├── 02-feature-engineering.ipynb ⏳
-    ├── 03-regresion-logistica.ipynb ⏳
-    ├── 04-arboles-decision.ipynb ⏳
-    ├── 05-random-forest.ipynb ⏳
-    ├── 06-xgboost.ipynb ⏳
-    └── 07-comparacion-modelos.ipynb ⏳
+└── notebook/ 🟡 (1/6 notebooks)
+    ├── eda.ipynb ✅ (renombrar a 01-eda.ipynb)
+    ├── 02-regresion-logistica.ipynb ⏳
+    ├── 03-arboles-decision.ipynb ⏳
+    ├── 04-random-forest.ipynb ⏳
+    ├── 05-xgboost.ipynb ⏳
+    └── 06-comparacion-modelos.ipynb ⏳
 ```
+
+**Nota**: NO hay carpeta `src/` - todo es autocontenido en notebooks
 
 ---
 
-## Próxima Sesión de Trabajo
+## Próximos Pasos
 
-### 🎯 Objetivo Inmediato: Completar Fase 1
+### 🎯 Inmediato (Semana 1)
 
-**Tarea 1**: Simplificar EDA notebook
-- Tiempo estimado: 2 horas
-- Reducir de 15 a 6-8 secciones
-- Mantener solo lo esencial para predicción
+1. **Simplificar EDA** (~2 horas)
+   - Reducir de 15 a 6-8 secciones
+   - Renombrar `eda.ipynb` → `01-eda.ipynb`
 
-**Tarea 2**: Crear `src/features.py`
-- Tiempo estimado: 3 horas
-- Implementar funciones básicas y avanzadas
-- Documentar con docstrings
-- Probar con dataset
+2. **Crear Regresión Logística** (~3 horas)
+   - Notebook autocontenido
+   - Feature engineering inline
+   - Archivo: `02-regresion-logistica.ipynb`
 
-**Tarea 3**: Crear notebook de feature engineering
-- Tiempo estimado: 3 horas
-- Explicar conceptos
-- Usar funciones de `src/features.py`
-- Crear train/test split
+### 🎯 Corto Plazo (Semana 2)
 
-**Total estimado Fase 1**: 8 horas
+3. **Crear Árboles de Decisión** (~2 horas)
+4. **Crear Random Forest** (~2 horas)
+5. **Crear XGBoost** (~2 horas)
+
+### 🎯 Final (Semana 3)
+
+6. **Crear Comparación** (~2 horas)
+7. **Testing y ajustes** (~1 hora)
+
+**Tiempo total estimado**: ~14 horas
 
 ---
 
 ## Registro de Cambios
 
-### 2025-11-07
-- ✅ Creado README.md con plan completo de 7 sesiones
+### 2025-11-07 (Actualización 2)
+- ✅ **SIMPLIFICADO**: Estructura sin módulos externos
+- ✅ Eliminada carpeta `src/` del plan
+- ✅ Reducido de 7 a 6 sesiones
+- ✅ Feature engineering ahora inline en cada notebook
+- ✅ README y PROGRESO actualizados
+
+### 2025-11-07 (Inicial)
+- ✅ Creado README.md con plan completo
 - ✅ Creado PROGRESO.md para tracking
 - ✅ EDA notebook existe (como `eda.ipynb`)
 - ✅ Dataset centralizado en `data/`
-- ⏳ Pendiente: Simplificar EDA
-- ⏳ Pendiente: Crear módulos en `src/`
 
 ---
 
-## Métricas de Progreso
+## Métricas
 
-### Notebooks
-- Completados: 1/7 (14%)
-- En progreso: 0/7 (0%)
-- Pendientes: 6/7 (86%)
-
-### Módulos de Código
-- Completados: 0/3 (0%)
-- Pendientes: 3/3 (100%)
-
-### Fase General
-- Fase 1 (Fundamentos): 25% (1/4 items)
-- Fase 2 (Básicos): 0% (0/2 items)
-- Fase 3 (Avanzados): 0% (0/2 items)
-- Fase 4 (Integración): 0% (0/1 items)
+**Notebooks**: 1/6 completados (17%)
+**Estimado para completar**: 14 horas (~2 semanas)
 
 ---
 
-## Notas y Observaciones
+## Decisiones de Diseño
 
-### Decisiones de Diseño
-- **Modularidad**: Cada notebook es independiente pero usa módulos compartidos
-- **Duración**: 50-60 minutos efectivos por sesión
-- **Progresión**: De simple (logística) a complejo (XGBoost)
-- **Comparación**: Mismas métricas y datos para todos los modelos
-
-### Desafíos Anticipados
-1. **Empates difíciles de predecir**: Es normal, ocurre en fútbol real también
-2. **Balance de teoría/práctica**: Mantener teoría en 10-15 minutos máximo
-3. **Tiempo de ejecución**: XGBoost puede ser lento, considerar parámetros
-
-### Ideas Futuras
-- [ ] Agregar validación cruzada en comparación final
-- [ ] Considerar SMOTE para balancear clases (Empate)
-- [ ] Análisis de errores más profundo
-- [ ] Predicciones por equipo específico
+- ✅ **Notebooks autocontenidos**: Sin módulos externos, todo inline
+- ✅ **Simplicidad**: Copiar/pegar código entre notebooks es OK (más didáctico)
+- ✅ **Duración**: 60 minutos por sesión
+- ✅ **Progresión**: De simple (logística) a complejo (XGBoost)
+- ✅ **Consistencia**: Mismo train/test split (random_state=42) en todos
 
 ---
 
-**Mantener este archivo actualizado después de cada sesión de trabajo**
+**Actualizar este archivo después de cada sesión**
