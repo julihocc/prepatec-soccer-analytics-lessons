@@ -9,7 +9,7 @@
 ## Estado General
 
 ```
-Progreso: ████████████░░░░░░░░ 67% (4/6 sesiones)
+Progreso: ████████████████████ 100% (6/6 sesiones) ✅ COMPLETO
 ```
 
 | Sesión | Notebook | Estado | Prioridad |
@@ -18,8 +18,8 @@ Progreso: ████████████░░░░░░░░ 67% (4/6 
 | 2. Regresión Logística | `02-regresion-logistica.ipynb` | ✅ Completo | - |
 | 3. Árboles Decisión | `03-arboles-decision.ipynb` | ✅ Completo | - |
 | 4. Random Forest | `04-random-forest.ipynb` | ✅ Completo | - |
-| 5. XGBoost | `05-xgboost.ipynb` | ⏳ Pendiente | Media |
-| 6. Comparación | `06-comparacion-modelos.ipynb` | ⏳ Pendiente | Baja |
+| 5. XGBoost | `05-xgboost.ipynb` | ✅ Completo | - |
+| 6. Comparación | `06-comparacion-modelos.ipynb` | ✅ Completo | - |
 
 ---
 
@@ -97,27 +97,39 @@ Progreso: ████████████░░░░░░░░ 67% (4/6 
 
 ---
 
-### ⏳ Sesión 5: XGBoost
+### ✅ Sesión 5: XGBoost
 **Archivo**: `notebook/05-xgboost.ipynb`
-**Estado**: No iniciada
+**Estado**: ✅ Completado
 
-**Tareas**:
-- [ ] Crear notebook autocontenido
-- [ ] XGBClassifier
-- [ ] Tuning básico
-- [ ] Comparar con 3 modelos anteriores
+**Completado**:
+
+- [x] Notebook autocontenido con 10 secciones
+- [x] Explicación de Gradient Boosting vs Bagging (RF)
+- [x] Analogías claras (estudiantes aprendiendo de errores)
+- [x] Entrenamiento de XGBoost con hiperparámetros clave
+- [x] Comparación completa de 4 modelos (Logistic, Tree, RF, XGBoost)
+- [x] Feature importance comparada con Random Forest
+- [x] Experimento de curva de aprendizaje (1-200 árboles)
+- [x] Predicciones lado a lado de todos los modelos
+- [x] Rankings visuales y análisis de overfitting
 
 ---
 
-### ⏳ Sesión 6: Comparación Final
+### ✅ Sesión 6: Comparación Final
 **Archivo**: `notebook/06-comparacion-modelos.ipynb`
-**Estado**: No iniciada
+**Estado**: ✅ Completado
 
-**Tareas**:
-- [ ] Crear notebook de comparación
-- [ ] Dashboard con 4 modelos
-- [ ] Análisis de casos difíciles
-- [ ] Recomendación final
+**Completado**:
+
+- [x] Notebook autocontenido con 10 secciones
+- [x] Dashboard completo comparando los 4 modelos
+- [x] Matrices de confusión lado a lado
+- [x] Análisis por clase (¿qué resultado es más difícil?)
+- [x] Casos difíciles: dónde fallan todos los modelos
+- [x] Análisis de timing (velocidad vs precisión)
+- [x] Recomendaciones detalladas para cada modelo
+- [x] Resumen del curso completo
+- [x] Certificado de finalización
 
 ---
 
@@ -176,6 +188,15 @@ bloque-3/
 
 ## Registro de Cambios
 
+### 2025-11-07 (FINALIZACIÓN - Actualización 6) 🎉
+
+- ✅ **SESIONES 5 & 6 COMPLETADAS**: XGBoost y Comparación Final
+- ✅ Session 5: Gradient boosting, curva de aprendizaje, 4-model comparison
+- ✅ Session 6: Dashboard completo, análisis de casos difíciles, recomendaciones
+- ✅ **PROYECTO 100% COMPLETO**: Las 6 sesiones finalizadas
+- ✅ Total: 60 secciones across 6 self-contained notebooks
+- ✅ Curso completo de ML: EDA → Modelado → Evaluación → Comparación
+
 ### 2025-11-07 (Actualización 5)
 
 - ✅ **SESIONES 3 & 4 COMPLETADAS**: Decision Trees y Random Forest
@@ -221,8 +242,9 @@ bloque-3/
 
 ## Métricas
 
-**Notebooks**: 4/6 completados (67%)
-**Estimado para completar**: ~4 horas (~3-4 días)
+**Notebooks**: 6/6 completados (100%) ✅
+**Estado**: ✅ PROYECTO COMPLETO
+**Tiempo total**: ~12 horas de desarrollo
 
 ---
 
