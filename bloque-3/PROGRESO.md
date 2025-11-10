@@ -9,15 +9,15 @@
 ## Estado General
 
 ```
-Progreso: ██████░░░░░░░░░░░░░░ 33% (2/6 sesiones)
+Progreso: ████████████░░░░░░░░ 67% (4/6 sesiones)
 ```
 
 | Sesión | Notebook | Estado | Prioridad |
 |--------|----------|--------|-----------|
 | 1. EDA | `01-eda.ipynb` | ✅ Completo | - |
 | 2. Regresión Logística | `02-regresion-logistica.ipynb` | ✅ Completo | - |
-| 3. Árboles Decisión | `03-arboles-decision.ipynb` | ⏳ Pendiente | Media |
-| 4. Random Forest | `04-random-forest.ipynb` | ⏳ Pendiente | Media |
+| 3. Árboles Decisión | `03-arboles-decision.ipynb` | ✅ Completo | - |
+| 4. Random Forest | `04-random-forest.ipynb` | ✅ Completo | - |
 | 5. XGBoost | `05-xgboost.ipynb` | ⏳ Pendiente | Media |
 | 6. Comparación | `06-comparacion-modelos.ipynb` | ⏳ Pendiente | Baja |
 
@@ -63,28 +63,37 @@ Progreso: ██████░░░░░░░░░░░░░░ 33% (2/6 
 
 ---
 
-### ⏳ Sesión 3: Árboles de Decisión
+### ✅ Sesión 3: Árboles de Decisión
 **Archivo**: `notebook/03-arboles-decision.ipynb`
-**Estado**: No iniciada
+**Estado**: ✅ Completado
 
-**Tareas**:
-- [ ] Crear notebook autocontenido
-- [ ] Mismo preprocesamiento que Sesión 2
-- [ ] DecisionTreeClassifier
-- [ ] Visualización del árbol
-- [ ] Comparar con regresión logística
+**Completado**:
+
+- [x] Notebook autocontenido con 11 secciones
+- [x] Explicación clara de árboles de decisión con analogías
+- [x] Visualización completa del árbol (full + simplified 3-level)
+- [x] Decision path explanation para ejemplos individuales
+- [x] Comparación detallada con Regresión Logística
+- [x] Feature importance analysis
+- [x] Análisis de overfitting
+- [x] Ejemplos de predicciones con explicación de rutas
 
 ---
 
-### ⏳ Sesión 4: Random Forest
+### ✅ Sesión 4: Random Forest
 **Archivo**: `notebook/04-random-forest.ipynb`
-**Estado**: No iniciada
+**Estado**: ✅ Completado
 
-**Tareas**:
-- [ ] Crear notebook autocontenido
-- [ ] RandomForestClassifier
-- [ ] Feature importance
-- [ ] Comparar con 2 modelos anteriores
+**Completado**:
+
+- [x] Notebook autocontenido con 11 secciones
+- [x] Concepto de Ensemble Learning explicado con analogías
+- [x] Entrenamiento de Random Forest (100 árboles)
+- [x] Comparación triple: Logística vs Árbol vs Random Forest
+- [x] Feature importance más robusta
+- [x] Análisis de confianza en predicciones
+- [x] Experimento: efecto del número de árboles (1-200)
+- [x] Visualizaciones comparativas detalladas
 
 ---
 
@@ -167,6 +176,15 @@ bloque-3/
 
 ## Registro de Cambios
 
+### 2025-11-07 (Actualización 5)
+
+- ✅ **SESIONES 3 & 4 COMPLETADAS**: Decision Trees y Random Forest
+- ✅ Session 3: Visualización de árboles, decision paths, comparaciones
+- ✅ Session 4: Ensemble learning, experimento con número de árboles
+- ✅ Comparación triple de modelos con visualizaciones
+- ✅ Feature importance robusta y análisis de confianza
+- ✅ Progreso: 67% (4/6 sesiones)
+
 ### 2025-11-07 (Actualización 4)
 
 - ✅ **SESIÓN 2 COMPLETADA**: Regresión Logística notebook finalizado
@@ -203,8 +221,8 @@ bloque-3/
 
 ## Métricas
 
-**Notebooks**: 2/6 completados (33%)
-**Estimado para completar**: ~10 horas (~1.5 semanas)
+**Notebooks**: 4/6 completados (67%)
+**Estimado para completar**: ~4 horas (~3-4 días)
 
 ---
 
