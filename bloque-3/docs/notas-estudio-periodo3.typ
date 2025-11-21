@@ -19,8 +19,6 @@ Entrenar un modelo significa fundamentalmente ajustar sus parámetros internos u
 
 El entrenamiento es un proceso iterativo y elegante. El modelo examina ejemplos del pasado, identifica patrones subyacentes en esos datos, y gradualmente ajusta sus parámetros internos para capturar esos patrones. Lo que buscamos es que el modelo aprenda a generalizar, es decir, que pueda hacer predicciones razonables sobre casos que nunca ha visto antes, no que simplemente recite de memoria lo que ocurrió en el pasado.
 
-#pagebreak()
-
 = La división fundamental: entrenamiento y prueba
 
 Uno de los conceptos más importantes en machine learning es la separación rigurosa entre datos de entrenamiento y datos de prueba. En scikit-learn, esta división se realiza mediante la función `train_test_split()`, que toma nuestros datos y los separa aleatoriamente en dos conjuntos. La sintaxis básica es elegante y directa:
@@ -37,8 +35,6 @@ Consideremos un ejemplo concreto para entender las proporciones. Si tenemos un d
 El overfitting, o sobreajuste, es uno de los desafíos más sutiles y peligrosos en machine learning. Volviendo a nuestra analogía futbolística, el overfitting es como un entrenador que ha memorizado cada jugada específica de los partidos anteriores sin realmente entender los principios fundamentales del juego. Este entrenador podría recitar perfectamente qué ocurrió en cada partido pasado, pero sería incapaz de adaptar sus estrategias a nuevas situaciones.
 
 ¿Cómo identificamos el overfitting en la práctica? El síntoma clásico es una discrepancia marcada entre el rendimiento en entrenamiento y en prueba. Si nuestro modelo muestra una precisión muy alta cuando lo evaluamos con los datos que usó para aprender, pero una precisión considerablemente más baja cuando lo probamos con datos nuevos, tenemos un caso claro de sobreajuste. El modelo memorizó los datos de entrenamiento en lugar de aprender patrones generalizables.
-
-#pagebreak()
 
 = Modelos de clasificación: regresión logística y random forest
 
@@ -62,8 +58,6 @@ rf.fit(X_train, y_train)
 y_pred = rf.predict(X_test)
 ```
 
-#pagebreak()
-
 = Características: selección e importancia
 
 Las características, o features, son las variables que alimentamos a nuestro modelo. La forma correcta de especificar características en Python es mediante una lista de strings con los nombres exactos de las columnas. Por ejemplo, si nuestro DataFrame contiene columnas como `goles_local`, `goles_visitante`, y `tiros_local`, especificaríamos nuestras características así:
@@ -84,8 +78,6 @@ importances = rf.feature_importances_
 # Esto nos da un array con la importancia de cada característica
 ```
 
-#pagebreak()
-
 = Variables derivadas: creando nuevas características
 
 Una de las técnicas más poderosas en machine learning es la creación de variables derivadas. Estas son nuevas características que construimos a partir de las existentes, con la esperanza de que capturen información relevante de una manera más directa. Un ejemplo simple pero efectivo es crear una variable `total_goles` que suma los goles del equipo local y visitante:
@@ -103,8 +95,6 @@ df['diferencia_goles'] = df['goles_local'] - df['goles_visitante']
 ¿Cómo sabemos si una variable derivada es útil? La respuesta está en experimentar y observar el impacto en el rendimiento del modelo. Si añadimos `diferencia_goles` como característica y vemos que la precisión de nuestras predicciones mejora, esto sugiere fuertemente que la diferencia de goles contiene información predictiva valiosa. Está capturando algo sobre el desempeño relativo de los equipos que es relevante para determinar el resultado.
 
 Por el contrario, si eliminamos una variable y la precisión se mantiene igual, hemos aprendido que esa variable no estaba aportando información útil. En ese caso, es mejor mantener el modelo más simple eliminando esa característica redundante.
-
-#pagebreak()
 
 = Métricas de evaluación: midiendo el éxito
 
@@ -136,8 +126,6 @@ cm = confusion_matrix(y_test, y_pred)
 
 Esta matriz nos permite ver no solo cuántas predicciones fueron correctas, sino también qué tipos de errores está cometiendo el modelo.
 
-#pagebreak()
-
 = La importancia del baseline
 
 Antes de celebrar los resultados de nuestro modelo, necesitamos un punto de referencia: el baseline. El baseline más simple es predecir siempre la clase mayoritaria. Por ejemplo, si en nuestro dataset de 40 partidos hay 18 victorias locales y 22 victorias visitantes, el baseline sería predecir siempre "victoria visitante", lo cual nos daría una precisión de $22/40 = 0.55$ o 55%.
@@ -154,9 +142,7 @@ Una acción razonable es conservar ambos modelos inicialmente y documentar esta 
 
 La interpretabilidad es valiosa. Con regresión logística, podemos entender relativamente fácil cómo cada característica está influyendo en las predicciones. Con Random Forest, esta interpretación es mucho más opaca. Si vamos a implementar este modelo en un contexto donde necesitemos explicar las decisiones, el modelo más simple podría ser preferible a pesar de su ligera desventaja en precisión.
 
-En este curso limitamos deliberadamente el número de modelos que exploramos. No estamos tratando de convertirnos en expertos en todas las técnicas de machine learning que existen. El objetivo es centrarnos en los fundamentos, desarrollar intuición sobre cómo funcionan estos algoritmos, y evitar la confusión que viene de intentar aprender demasiadas técnicas simultáneamente. Una vez que estos fundamentos están sólidos, será mucho más fácil expandir a técnicas más avanzadas.
-
-#pagebreak()
+En este curso limitamos deliberadamente el número de modelos que exploramos. No estamos tratando de convertirnos en expertos en todas las técnicas de machine learning que existen. El objetivo es centrarnos en los fundamentos, desarrollar intuición sobre cómo funcionan estos algoritmos, y evitar la confusión que viene de intentar aprender demasiadas técnicas simultáneamente. Una vez que estos fundamentos están sólidos, será mucho más fácil expandar a técnicas más avanzadas.
 
 = Análisis experimental: interpretando cambios
 
