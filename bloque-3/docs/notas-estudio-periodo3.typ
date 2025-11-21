@@ -4,9 +4,25 @@
 #set par(justify: true, leading: 0.65em)
 
 #align(center)[
-  #text(size: 20pt, weight: "bold")[Notas de Estudio - Período 3]
-  #text(size: 14pt)[Machine Learning Básico con Scikit-Learn]
+  #v(2em)
+  #text(size: 24pt, weight: "bold")[Notas de Estudio]
   #v(1em)
+  #text(size: 18pt)[Bloque 3: Modelos de Aprendizaje Automático]
+  #v(2em)
+
+  #line(length: 60%, stroke: 0.5pt)
+  #v(1.5em)
+
+  #text(size: 12pt)[
+    *Curso:* PS5005 Programación Básica I \
+    *Estudiante:* Juliho Castillo Colmenares \
+    *Institución:* Prepa Tec \
+    *Período:* Semestre AD25
+  ]
+
+  #v(1.5em)
+  #line(length: 60%, stroke: 0.5pt)
+  #v(3em)
 ]
 
 = Introducción al concepto de modelo
